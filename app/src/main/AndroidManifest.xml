@@ -5,10 +5,32 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.DoAnMobile">
+        android:supportsRtl="true">
+        <activity
+            android:name=".Create_Campaign_2"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Create_Campaign_2"
+        />
+        <activity
+            android:name=".Create_Campaign"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Create_Campaign"
+            />
+        <activity
+            android:name=".Sign_up"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Sign_up"
+            />
+        <activity
+            android:name=".Login"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Login"
+            />
         <activity
             android:name=".activity.DashboardActivity"
             android:exported="true">
