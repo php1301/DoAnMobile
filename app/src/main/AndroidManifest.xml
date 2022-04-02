@@ -8,6 +8,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <activity
+            android:name=".Wallet"
+            android:exported="true" />
+        <activity
+            android:name=".AllActivity"
+            android:exported="true"
+            android:label="Activity" />
+        <activity
+            android:name=".Account"
+            android:exported="true"
+            android:label="Account" />
+        <activity
+            android:name=".Setting"
+            android:exported="true"
+            android:label="Setting" />
+        <activity
+            android:name=".MainActivity"
             android:name=".Create_Campaign_2"
             android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"
