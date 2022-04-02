@@ -6,4 +6,22 @@
         basis. Along with this, four dedicated urban farming master class workshops to provide
         skills for minimum 20 underprivileged adult participants will be conducted along with
         two children greenhouse/farm tours for refugee and needy youth groups</string>
+    <string name="language">Language</string>
+    <string name="notifications">Notifications</string>
+    <string name="support">Support</string>
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="name">Name</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="my_wallet">My Wallet</string>
+    <string name="deposit_money">Deposit money</string>
+    <string name="withdraw_money">Withdraw money</string>
+    <string name="activity">Activity</string>
+    <string name="view_all">View all</string>
+    <string name="array">Don\'t have an account? <font name="Sign_up" color="#6AE5D6">Sign Up</font></string>
+    <string name="Term">I agree with <font name="Terms" color="#6AE5D6">Terms and Conditions</font></string>
+    <string name="array2">Already have an account? <font name="Sign_in" color="#6AE5D6">Log in</font></string>
 </resources>

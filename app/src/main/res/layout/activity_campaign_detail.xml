@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.DashboardActivity"
+    tools:ignore="MissingConstraints"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_campaign_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40mdp"
+        android:background="@color/blue_mbg"
+        app:title=""
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="Campaign"
+            android:textSize="@dimen/_18font_mdp"
+            android:textStyle="bold"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/_15mdp"
+            android:paddingVertical="@dimen/_15mdp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_organization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgv_avatar_organization"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:src="@color/teal_200"/>
+
+                <TextView
+                    android:id="@+id/txtv_name_organization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10mdp"
+                    android:text="Organization"
+                    android:textSize="@dimen/_18font_mdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgv_avatar_organization"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10mdp"
+                    android:src="@drawable/ic_verified"
+                    app:tint="@color/blue_mbg"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txtv_name_organization"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_campaign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgv_img_campaign"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150mdp"
+                    android:maxHeight="@dimen/_100mdp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/imgv_rounded"
+                    android:src="@drawable/campaignimg"/>
+
+                <TextView
+                    android:id="@+id/txtv_name_campaign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10mdp"
+                    android:text="COVID-19 Vaccine Support Fund"
+                    android:textSize="@dimen/_18font_mdp"
+                    app:layout_constraintTop_toBottomOf="@id/imgv_img_campaign"/>
+
+                <ProgressBar
+                    android:id="@+id/pgb_campaign"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_8mdp"
+                    android:layout_marginVertical="@dimen/_10mdp"
+                    android:progress="50"
+                    android:max="100"
+                    android:progressTint="@color/aquamarine"
+                    android:scaleY="2"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/txtv_name_campaign"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10mdp"
+                    app:layout_constraintTop_toBottomOf="@id/pgb_campaign"
+                    tools:ignore="NotSibling">
+
+                    <TextView
+                        android:id="@+id/txtv_gain_eth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_10mdp"
+                        android:text="5500"
+                        android:textSize="@dimen/_20font_mdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue_mbg" />
+
+                    <TextView
+                        android:id="@+id/txtv_target_eth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/10000 ETH"
+                        android:textSize="@dimen/_20font_mdp"
+                        android:textColor="@color/darkgray"
+                        app:layout_constraintStart_toEndOf="@id/txtv_gain_eth"
+                        app:layout_constraintTop_toBottomOf="@id/pgb_campaign"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/crv_dayleft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_20mdp"
+                        app:strokeColor="@color/blue_mbg"
+                        app:strokeWidth="1dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/pgb_campaign"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingHorizontal="@dimen/_10mdp"
+                            android:text="20 days left"
+                            android:textColor="@color/blue_mbg"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/constraint_detail">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtv_achieve"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/darkgray"
+                            android:text="Achieve"/>
+
+                        <TextView
+                            android:id="@+id/txtv_percent_campaign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="55%"
+                            android:textSize="@dimen/_18font_mdp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/_10mdp">
+
+                        <TextView
+                            android:id="@+id/txtv_numdonate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Num of donation"
+                            android:textColor="@color/darkgray"/>
+
+                        <TextView
+                            android:id="@+id/txtv_numdonate_campaign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="105"
+                            android:textSize="@dimen/_18font_mdp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/_10mdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Days left"
+                            android:textColor="@color/darkgray"/>
+
+                        <TextView
+                            android:id="@+id/txtv_dayleft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20"
+                            android:textSize="@dimen/_18font_mdp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btndonate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30mdp"
+                    android:layout_marginVertical="@dimen/_10mdp"
+                    android:background="@drawable/rounded_blue_btn"
+                    android:text="Donate"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/linear_detail"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_20mdp"
+                android:background="@color/darkgray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtv_lb_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Campaign Information"
+                    android:textSize="@dimen/_18mdp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/txtv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="This Campaign is to Donate Funds for Covid Relief in India, the situation. The manager is https://twitter.com/harshbadhai28 and all the receives will go to ABCD Foundation which will help in buying, delivering oxygen, and other covid related help. If you want to withdraw funds from this campaign please feel free to create a request, and ping me on Twitter so that I can help you get the funds as soon as possible."
+                    app:layout_constraintTop_toBottomOf="@+id/txtv_lb_info"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_info_viewall"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30mdp"
+                    android:layout_marginVertical="@dimen/_10mdp"
+                    android:background="@drawable/rounded_white_btn"
+                    android:text="View All"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue_mbg"
+                    app:layout_constraintTop_toBottomOf="@id/txtv_info"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_20mdp"
+                android:background="@color/darkgray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtv_lb_donorslist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Donors List"
+                    android:textSize="@dimen/_18mdp"
+                    android:textStyle="bold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_donors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/txtv_lb_donorslist"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_donors_viewall"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30mdp"
+                    android:layout_marginVertical="@dimen/_10mdp"
+                    android:background="@drawable/rounded_white_btn"
+                    android:text="View All"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue_mbg"
+                    app:layout_constraintTop_toBottomOf="@id/rv_donors"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

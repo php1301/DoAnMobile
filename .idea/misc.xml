@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<!-- <<<<<<< BinhUI
         <entry key="..\:/Users/user/OneDrive/my_folder/year_3/HK2/phat trien ung dung mobile/DoAnMobile-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1895" />
         <entry key="..\:/Users/user/OneDrive/my_folder/year_3/HK2/phat trien ung dung mobile/DoAnMobile-master/app/src/main/res/drawable/border_under.xml" value="0.1855" />
         <entry key="..\:/Users/user/OneDrive/my_folder/year_3/HK2/phat trien ung dung mobile/DoAnMobile-master/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1895" />
@@ -17,6 +18,49 @@
         <entry key="..\:/Users/user/OneDrive/my_folder/year_3/HK2/phat trien ung dung mobile/DoAnMobile-master/app/src/main/res/layout/activity_search.xml" value="0.264" />
         <entry key="..\:/Users/user/OneDrive/my_folder/year_3/HK2/phat trien ung dung mobile/DoAnMobile-master/app/src/main/res/layout/oval.xml" value="0.15324074074074073" />
         <entry key="..\:/Users/user/OneDrive/my_folder/year_3/HK2/phat trien ung dung mobile/DoAnMobile-master/app/src/main/res/layout/test.xml" value="0.536" />
+======= -->
+<!-- <<<<<<< UITrung
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/blue_ecllipse.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/blue_frame.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/blue_oval_shape.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/btn_frame.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/btn_setting.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/ellipse.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/gray_ellipse.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/header_frame.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/ic_language_24.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/money_function_frame.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/round_setting.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/text_frame.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/drawable/withdraw_btn_frame.xml" value="0.2265" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/font/roboto_thin.xml" value="0.284375" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/layout/action_bar.xml" value="0.22826086956521738" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/layout/activity_account.xml" value="0.2" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/layout/activity_all.xml" value="0.22826086956521738" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/layout/activity_setting.xml" value="0.264" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/layout/activity_wallet.xml" value="0.2" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/layout/list_activity.xml" value="0.22826086956521738" />
+        <entry key="..\:/Solfware/Mobile project/DoAnMobile/app/src/main/res/layout/list_wallet.xml" value="0.22826086956521738" />
+======= -->
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2265" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable/custimize_input_r.xml" value="0.2265" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable/customize_cam_in_l.xml" value="0.2265" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable/customize_cam_in_r.xml" value="0.2265" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable/customize_campaign_input.xml" value="0.2265" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable/customize_inputype.xml" value="0.2265" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable/ic_eyes.xml" value="0.2265" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable/ic_facebook.xml" value="0.2265" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable/ic_google.xml" value="0.2265" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable/round_button.xml" value="0.2265" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable/round_button_r_b.xml" value="0.2265" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/layout/activity_create_campaign.xml" value="0.264" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/layout/activity_create_campaign2.xml" value="0.10885341074020319" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/layout/activity_sign_up.xml" value="0.22826086956521738" />
       </map>
     </option>
   </component>
