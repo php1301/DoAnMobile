@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">DoAnMobile</string>
+    <string name="test_text">This project aims to construct two 20X40 feet greenhouses
+        (onsite at Urban Hijau and at NGO location), providing 50% of the harvest from
+        greenhouse directly to refugee and needy families at an estimated 15kg on a weekly
+        basis. Along with this, four dedicated urban farming master class workshops to provide
+        skills for minimum 20 underprivileged adult participants will be conducted along with
+        two children greenhouse/farm tours for refugee and needy youth groups</string>
 </resources>

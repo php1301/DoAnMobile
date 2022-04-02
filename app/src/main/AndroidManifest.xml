@@ -10,13 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAnMobile">
         <activity
-            android:name=".MainActivity"
+            android:name=".DonorsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PathOfCampaignActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".DonateActivity"
+            android:exported="true">
         </activity>
     </application>
 
