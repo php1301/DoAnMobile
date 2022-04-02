@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoAnMobile">
         <activity
+            android:name=".Wallet"
+            android:exported="true" />
+        <activity
+            android:name=".AllActivity"
+            android:exported="true"
+            android:label="Activity" />
+        <activity
+            android:name=".Account"
+            android:exported="true"
+            android:label="Account" />
+        <activity
+            android:name=".Setting"
+            android:exported="true"
+            android:label="Setting" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
