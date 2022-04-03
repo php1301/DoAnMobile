@@ -12,4 +12,7 @@
     <color name="dark_grey">#A9A9A9</color>
     <color name="Turquoise_Blue">#6AE5D6</color>
     <color name="blue">#0A5DAE</color>
+    <color name="blue_mbg">#0A5DAE</color>
+    <color name="aquamarine">#6ae5d6</color>
+    <color name="darkgray">#B2B2B2</color>
 </resources>
