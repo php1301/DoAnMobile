@@ -14,7 +14,8 @@
         android:layout_height="@dimen/_40mdp"
         android:background="@color/blue_mbg"
         app:title=""
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        app:iconTint="@color/white"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
         <TextView
             android:layout_width="wrap_content"

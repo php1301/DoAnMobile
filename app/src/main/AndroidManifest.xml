@@ -23,7 +23,6 @@
             android:exported="true"
             android:label="Setting" />
         <activity
-            android:name=".MainActivity"
             android:name=".Create_Campaign_2"
             android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"
@@ -49,7 +48,8 @@
             />
         <activity
             android:name=".activity.DashboardActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -58,7 +58,8 @@
         </activity>
         <activity
             android:name=".activity.CampaignDetailActivity"
-            android:exported="false"/>
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.MainActivity"
             android:exported="false"/>
