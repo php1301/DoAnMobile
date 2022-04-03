@@ -15,6 +15,6 @@ public class Wallet extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wallet);
 
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
     }
 }
