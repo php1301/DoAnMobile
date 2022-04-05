@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:minHeight="@dimen/_390mdp"
-    android:paddingVertical="@dimen/_8mdp"
+    android:minHeight="@dimen/_380mdp"
+    android:paddingTop="@dimen/_10mdp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:ignore="MissingConstraints">
 

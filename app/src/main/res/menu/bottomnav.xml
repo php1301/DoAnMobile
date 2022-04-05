@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Dashboard"
+        android:iconTint="@color/darkslategray">
+    </item>
+    <item
+        android:id="@+id/walletFragment"
+        android:icon="@drawable/ic_wallet"
+        android:title="Wallet"
+        android:iconTint="@color/darkslategray">
+    </item>
+    <item
+        android:id="@+id/campaignFragment"
+        android:icon="@drawable/ic_volunteer_activism"
+        android:title="Manage Campaign"
+        android:iconTint="@color/darkslategray">
+    </item>
+    <item
+        android:id="@+id/accountFragment"
+        android:icon="@drawable/ic_person"
+        android:title="Account"
+        android:iconTint="@color/darkslategray">
+    </item>
+    <item
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="Setting"
+        android:iconTint="@color/darkslategray">
+    </item>
+</menu>
