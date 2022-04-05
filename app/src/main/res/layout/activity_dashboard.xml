@@ -7,7 +7,6 @@
     tools:context=".activity.DashboardActivity"
     tools:ignore="MissingConstraints"
     android:orientation="vertical">
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_dashboard"
         android:layout_width="match_parent"
@@ -15,30 +14,6 @@
         android:background="@color/blue_mbg"
         app:title=""
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textColor="@color/white"
-            android:text="Dashboard"
-            android:textSize="@dimen/_18font_mdp"
-            android:textStyle="bold"/>
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <ScrollView
-        android:layout_marginTop="@dimen/_15mdp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_campaign"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-    </ScrollView>
-
 </LinearLayout>
 
 

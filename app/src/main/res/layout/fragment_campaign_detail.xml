@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".activity.CampaignDetailActivity"
+    tools:context=".fragment.CampaignDetailFragment"
     tools:ignore="MissingConstraints"
     android:orientation="vertical">
 
@@ -16,6 +16,7 @@
         android:background="@color/blue_mbg"
         app:title=""
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

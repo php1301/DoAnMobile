@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.DoAnMobile" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.DoAnMobile" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -16,5 +16,6 @@
         <item name="titleTextColor">@color/white</item>
         <item name="android:textSize">@dimen/_12font_mdp</item>
         <item name="android:textColor">@color/black</item>
+
     </style>
 </resources>

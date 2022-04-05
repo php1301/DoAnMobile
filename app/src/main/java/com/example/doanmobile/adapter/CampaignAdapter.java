@@ -19,9 +19,11 @@ import java.util.List;
 public class CampaignAdapter extends RecyclerView.Adapter<CampaignAdapter.CampaignViewHolder> {
 
     private List<Campaign> campaignsList;
+    private Context context;
 
-    public CampaignAdapter(List<Campaign> campaignsList) {
+    public CampaignAdapter(List<Campaign> campaignsList, Context context) {
         this.campaignsList = campaignsList;
+        this.context = context;
     }
 
     @NonNull

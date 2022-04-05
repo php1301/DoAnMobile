@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Account">
+    tools:context=".fragment.AccountFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,10 +24,10 @@
                 android:layout_marginTop="44dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/oval_shape"
-                android:backgroundTint="@color/gray_oval"
-                android:contentDescription="Avatar"
                 android:scaleType="center"
                 android:src="@drawable/ic_person_outline_24"
+                android:backgroundTint="@color/gray_oval"
+                android:contentDescription="Avatar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
