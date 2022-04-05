@@ -106,33 +106,41 @@
         app:layout_constraintTop_toBottomOf="@id/Input_Img"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/Input_Target_Amount"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/customize_cam_in_r"
-        android:ems="10"
-        android:inputType="number"
-        android:padding="14dp"
-        android:textColor="@color/dark_grey"
-        android:textSize="20dp"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Target_group"
         app:layout_constraintTop_toBottomOf="@id/Camp_Target_Amount"
-        tools:ignore="MissingConstraints" />
-    <TextView
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/customize_cam_in_l"
-        android:text="ETH"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Camp_Target_Amount"
-        tools:ignore="MissingConstraints"></TextView>
+        >
+        <EditText
+            android:id="@+id/Input_Target_Amount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/customize_cam_in_r"
+            android:ems="10"
+            android:inputType="number"
+            android:padding="14dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/customize_cam_in_l"
+            android:text="ETH"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Camp_Target_Amount"
+            tools:ignore="MissingConstraints"></TextView>
+    </LinearLayout>
     <TextView
         android:id="@+id/Camp_Minimum_Amount"
         android:layout_width="wrap_content"
@@ -142,37 +150,48 @@
         android:textSize="18dp"
         android:paddingStart="2dp"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/Input_Target_Amount"
+        app:layout_constraintTop_toBottomOf="@id/Target_group"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/Input_Minimum_Amount"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/customize_cam_in_r"
-        android:ems="10"
-        android:inputType="number"
-        android:padding="14dp"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Camp_Minimum_Amount"
-        tools:ignore="MissingConstraints" />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="horizontal"
+       android:id="@+id/Minimum_group"
+       app:layout_constraintTop_toBottomOf="@id/Camp_Minimum_Amount"
+       >
+       <EditText
+           android:id="@+id/Input_Minimum_Amount"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginTop="4dp"
+           android:layout_weight="1"
+           android:background="@drawable/customize_cam_in_r"
+           android:ems="10"
+           android:inputType="number"
+           android:padding="14dp"
+           android:textColor="@color/black"
+           android:textSize="20dp"
+           app:layout_constraintHorizontal_bias="1.0"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/Camp_Minimum_Amount"
+           tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/customize_cam_in_l"
-        android:text="ETH"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Camp_Minimum_Amount"
-        tools:ignore="MissingConstraints"></TextView>
+       <TextView
+           android:layout_weight="4"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginTop="4dp"
+           android:background="@drawable/customize_cam_in_l"
+           android:text="ETH"
+           android:textAlignment="center"
+           android:textSize="20dp"
+           android:gravity="center"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/Camp_Minimum_Amount"
+           tools:ignore="MissingConstraints"></TextView>
+   </LinearLayout>
+
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
@@ -183,7 +202,7 @@
         android:textColor="@color/white"
         android:textSize="18dp"
         android:backgroundTint="@color/blue"
-        app:layout_constraintTop_toBottomOf="@+id/Input_Minimum_Amount"
+        app:layout_constraintTop_toBottomOf="@+id/Minimum_group"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -7,9 +7,13 @@
     tools:context=".activity.DashboardActivity"
     tools:ignore="MissingConstraints"
     android:orientation="vertical">
-
-
-
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40mdp"
+        android:background="@color/blue_mbg"
+        app:title=""
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 </LinearLayout>
 
 
