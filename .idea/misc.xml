@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MobileProjects/DoAnMobile/app/src/main/res/layout/activity_campaign_detail.xml" value="0.1" />
         <entry key="..\:/MobileProjects/DoAnMobile/app/src/main/res/layout/activity_dashboard.xml" value="0.1" />
         <entry key="..\:/MobileProjects/DoAnMobile/app/src/main/res/layout/activity_main.xml" value="0.20380434782608695" />
+        <entry key="..\:/MobileProjects/DoAnMobile/app/src/main/res/layout/item_campaign.xml" value="0.1" />
         <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2265" />
         <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable/custimize_input_r.xml" value="0.2265" />
         <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/drawable/customize_cam_in_l.xml" value="0.2265" />
