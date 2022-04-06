@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="imgv_rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_10mdp</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="ShapeAppearance.Material3.MediumComponent.Rounded" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_15mdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_15mdp</item>
+    </style>
+</resources>
