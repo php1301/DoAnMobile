@@ -12,8 +12,8 @@
     <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginHorizontal="@dimen/_10mdp"
-            android:layout_marginVertical="@dimen/_10mdp"
+            android:layout_marginHorizontal="@dimen/_5mdp"
+            android:layout_marginVertical="@dimen/_5mdp"
             app:cardCornerRadius="15dp"
             app:cardElevation="@dimen/_3mdp"
             android:backgroundTint="@color/white"
@@ -54,7 +54,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_10mdp"
                         android:src="@drawable/ic_verified"
-                        app:tint="@color/blue_mbg"
+                        android:tint="@color/blue_mbg"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/txtv_name_organization"/>

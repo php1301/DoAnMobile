@@ -5,19 +5,16 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.doanmobile.Campaign;
 import com.example.doanmobile.R;
 import com.example.doanmobile.adapter.CampaignAdapter;
-import com.example.doanmobile.databinding.ActivityDashboardBinding;
 import com.example.doanmobile.databinding.FragmentDashboardBinding;
 
 import java.util.ArrayList;
@@ -47,6 +44,13 @@ public class DashboardFragment extends Fragment {
 
         createTestList();
 
+        binding.btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // action = DashboardFragmentDirections.action
+                Navigation.findNavController(view).navigate(R.id.action_dashboardFragment_to_campaignDetailFragment);
+            }
+        });
 
        // setSupportActionBar(binding.toolbarDashboard);
         //getSupportActionBar().setDisplayShowTitleEnabled(false);

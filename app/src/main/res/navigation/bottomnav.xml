@@ -14,7 +14,11 @@
         android:id="@+id/dashboardFragment"
         android:name="com.example.doanmobile.fragment.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_campaignDetailFragment"
+            app:destination="@id/campaignDetailFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/walletFragment"
         android:name="com.example.doanmobile.fragment.WalletFragment"
@@ -30,4 +34,9 @@
         android:name="com.example.doanmobile.fragment.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/campaignDetailFragment2"
+        android:name="com.example.doanmobile.fragment.CampaignDetailFragment"
+        android:label="fragment_campaign_detail"
+        tools:layout="@layout/fragment_campaign_detail" />
 </navigation>

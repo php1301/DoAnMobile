@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,351 +11,262 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_balance"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/header_frame"
-                android:orientation="vertical"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteX="1dp">
-
-                <TextView
-                    android:id="@+id/hello_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="25dp"
-                    android:paddingRight="20dp"
-                    android:paddingBottom="10dp"
-                    android:text="Hello, Mobile!"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/ETH_value"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ETH 1000"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    android:textSize="48sp" />
-
-                <TextView
-                    android:id="@+id/balance_value"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="30dp"
-                    android:text="Your balance"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/btn_deposit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/deposit_btn_frame"
-                android:backgroundTint="@null"
-                android:clickable="true"
-                android:gravity="left"
-                android:orientation="vertical"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-                android:focusable="true">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="60dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/oval_shape"
-                    android:backgroundTint="@color/gray_oval"
-                    android:contentDescription="Deposit"
-                    android:scaleType="center"
-                    android:src="@drawable/ic_deposit_24" />
-
-                <TextView
-                    android:id="@+id/deposit_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_weight="1"
-                    android:lines="2"
-                    android:text="@string/deposit_money"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/btn_withdraw"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/withdraw_btn_frame"
-                android:backgroundTint="@null"
-                android:clickable="true"
-                android:gravity="left"
-                android:orientation="vertical"
-                app:layout_constraintStart_toEndOf="@+id/btn_deposit"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-                android:focusable="true">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="60dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/oval_shape"
-                    android:backgroundTint="@color/gray_oval"
-                    android:contentDescription="Withdraw"
-                    android:scaleType="center"
-                    android:src="@drawable/ic_withdraw_24" />
-
-                <TextView
-                    android:id="@+id/withdraw_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_weight="1"
-                    android:lines="2"
-                    android:text="@string/withdraw_money"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
-            </LinearLayout>
+            android:layout_height="wrap_content"
+            android:background="@color/blue_mbg"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="1dp">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/hello_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="25dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:text="Hello, Mobile!"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ETH_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ETH 1000"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/balance_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="30dp"
+                android:text="Your balance"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_15font_mdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/_10mdp"
+            android:layout_marginVertical="@dimen/_15mdp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_deposit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:minWidth="@dimen/_85mdp"
+                android:layout_margin="@dimen/_5mdp"
+                app:cardElevation="@dimen/_3mdp"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="@color/blue_mbg"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:id="@+id/btn_deposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@null"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout_balance">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:contentDescription="Deposit"
+                        android:scaleType="center"
+                        android:tint="@color/white"
+                        android:src="@drawable/ic_deposit_24" />
+
+                    <TextView
+                        android:id="@+id/deposit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/deposit_money"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_15font_mdp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_withdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/_85mdp"
+                android:layout_margin="@dimen/_5mdp"
+                app:cardElevation="@dimen/_3mdp"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="@color/white"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:id="@+id/btn_withdraw"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@null"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout_balance">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:contentDescription="Deposit"
+                        android:scaleType="center"
+                        android:tint="@color/blue_mbg"
+                        android:src="@drawable/ic_deposit_24" />
+
+                    <TextView
+                        android:id="@+id/withdraw_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/withdraw_money"
+                        android:textColor="@color/blue_mbg"
+                        android:textSize="@dimen/_15font_mdp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_10mdp"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/lb_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5mdp"
                 android:text="@string/activity"
                 android:textColor="#000000"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_deposit" />
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
-                android:id="@+id/view_all"
+                android:id="@+id/txtv_view_all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="@dimen/_5mdp"
                 android:text="@string/view_all"
                 android:textColor="#0A5DAE"
                 android:textSize="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.941"
-                app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/btn_withdraw" />
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-            <LinearLayout
-                android:id="@+id/linearLayout4"
-                android:layout_width="325dp"
-                android:layout_height="71dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="18dp"
-                android:background="@drawable/btn_frame"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
-
-                <ImageView
-                    android:id="@+id/image_activity1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="4"
-                    android:background="@drawable/oval_shape"
-                    android:backgroundTint="@color/gray_oval"
-                    android:src="@drawable/ic_person_outline_24" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_10mdp"
+                android:layout_marginHorizontal="@dimen/_5mdp"
+                app:cardElevation="@dimen/_3mdp"
+                app:cardPreventCornerOverlap="true"
+                app:layout_constraintTop_toBottomOf="@id/lb_activity"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.MediumComponent.Rounded"
+                android:theme="@style/Theme.MaterialComponents.Light">
 
                 <LinearLayout
+                    android:id="@+id/linearLayout_activity"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:orientation="vertical"
-                    android:paddingLeft="10dp">
+                    android:padding="@dimen/_5mdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/name_activity1"
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgv_activity"
+                        android:layout_width="@dimen/_30mdp"
+                        android:layout_height="@dimen/_30mdp"
+                        android:src="@color/teal_200"/>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:ellipsize="end"
-                        android:maxLines="1"
-                        android:text="Quỹ vaccine..."
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:layout_weight="3"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:id="@+id/name_activity1"
+                            android:layout_width="164dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Quỹvaccine..."
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/time_activity1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="2hoursago"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
 
                     <TextView
-                        android:id="@+id/time_activity1"
+                        android:id="@+id/txt_activity_money"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="2 hours ago"
-                        android:textSize="14sp" />
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:gravity="right"
+                        android:text="-1.5ETH"
+                        android:textColor="@color/text_value"
+                        android:textSize="18sp"/>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text_value1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3.5"
-                    android:gravity="center"
-                    android:text="- 1.5 ETH"
-                    android:textColor="@color/text_value"
-                    android:textSize="18sp" />
-            </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-            <LinearLayout
-                android:id="@+id/linearLayout5"
-                android:layout_width="325dp"
-                android:layout_height="71dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginEnd="18dp"
-                android:background="@drawable/btn_frame"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-                <ImageView
-                    android:id="@+id/image_activity2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="4"
-                    android:background="@drawable/oval_shape"
-                    android:backgroundTint="@color/gray_oval"
-                    android:src="@drawable/ic_person_outline_24" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:orientation="vertical"
-                    android:paddingLeft="10dp">
-
-                    <TextView
-                        android:id="@+id/name_activity2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:ellipsize="end"
-                        android:maxLines="1"
-                        android:text="Quỹ vaccine..."
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/time_activity2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="2 hours ago"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/text_value2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3.5"
-                    android:gravity="center"
-                    android:text="- 1.5 ETH"
-                    android:textColor="@color/text_value"
-                    android:textSize="18sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="325dp"
-                android:layout_height="71dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginEnd="18dp"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/btn_frame"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
-
-                <ImageView
-                    android:id="@+id/image_activity3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="4"
-                    android:background="@drawable/oval_shape"
-                    android:backgroundTint="@color/gray_oval"
-                    android:src="@drawable/ic_person_outline_24" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:orientation="vertical"
-                    android:paddingLeft="10dp">
-
-                    <TextView
-                        android:id="@+id/name_activity3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:ellipsize="end"
-                        android:maxLines="1"
-                        android:text="Deposit money"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/time_activity3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="2 hours ago"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/text_value3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3.5"
-                    android:gravity="center"
-                    android:text="+ 2.5 ETH"
-                    android:textColor="@color/text_value2"
-                    android:textSize="18sp" />
-            </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
