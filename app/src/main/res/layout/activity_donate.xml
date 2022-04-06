@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    tools:context=".DonateActivity">
+
+    <LinearLayout
+        android:layout_width="420dp"
+        android:layout_height="132dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/round"
+        android:elevation="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textVIew1"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Campaign Balance"
+            android:textColor="@color/black"
+            android:textSize="22sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textViewCurrentBalance"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="5500 ETH"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textTargetBalance"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Target of 10000 ETH"
+            android:textColor="@color/black"
+            android:textSize="22sp">
+        </TextView>
+
+        <ProgressBar
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Wallet Address of Campaign Creator"
+            android:textColor="@color/black"
+            android:textSize="22sp">
+        </TextView>
+
+        <TextView
+
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="0x5d7676dB6119Ed1F6C696419058310D16a..."
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold">
+        </TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="420dp"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/round"
+        android:elevation="5dp">
+
+        <TextView
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Your wallet address"
+            android:textColor="@color/black"
+            android:textSize="22sp">
+        </TextView>
+
+        <TextView
+
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="0x5d7676dB6119Ed1F6C696419058310D16a..."
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Donation amount"
+            android:textColor="@color/black"
+            android:textSize="22sp">
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            app:boxStrokeColor="@color/blue"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="1dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="~200 USD"
+            android:textColor="#76000000"
+            android:textSize="20sp"
+            android:textStyle="">
+        </TextView>
+
+        <Button
+            android:id="@+id/buttonDonate"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Donate" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+    </TextView>
+
+</LinearLayout>

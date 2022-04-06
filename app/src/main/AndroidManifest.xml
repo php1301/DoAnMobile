@@ -8,6 +8,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <activity
+            android:name=".DonorsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PathOfCampaignActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="true">
             android:name=".Wallet"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
@@ -69,6 +77,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".DonateActivity"
+            android:exported="true">
+        </activity>
             android:name=".activity.CampaignDetailActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
