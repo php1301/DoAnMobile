@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< Updated upstream
         <entry key="..\:/MobileProjects/DoAnMobile/app/src/main/res/layout/activity_campaign_detail.xml" value="0.1" />
         <entry key="..\:/MobileProjects/DoAnMobile/app/src/main/res/layout/activity_dashboard.xml" value="0.1" />
         <entry key="..\:/MobileProjects/DoAnMobile/app/src/main/res/layout/activity_main.xml" value="0.20380434782608695" />
@@ -24,6 +25,41 @@
         <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
         <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Mobile_Project/DoAnMobile/app/src/main/res/layout/activity_sign_up.xml" value="0.22826086956521738" />
+=======
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/drawable/blue_oval_shape.xml" value="0.129" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/drawable/bottomnav_color_selector.xml" value="0.129" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/drawable/btn_frame.xml" value="0.2535" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/drawable/cardview_rounded.xml" value="0.19" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/drawable/deposit_btn_frame.xml" value="0.2535" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/drawable/header_frame.xml" value="0.19" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/drawable/round_button.xml" value="0.19" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/drawable/round_button_r_b.xml" value="0.19" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/drawable/rounded_blue_btn.xml" value="0.2025" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/drawable/rounded_toolbar.xml" value="0.19" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/activity_account.xml" value="0.2441123188405797" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/activity_all.xml" value="0.2441123188405797" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/activity_campaign_detail.xml" value="0.1" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/activity_create_campaign.xml" value="0.25677083333333334" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/activity_create_campaign2.xml" value="0.25677083333333334" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/activity_dashboard.xml" value="0.1" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/activity_login.xml" value="0.25677083333333334" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/activity_main.xml" value="0.2441123188405797" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/activity_setting.xml" value="0.25677083333333334" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/activity_sign_up.xml" value="0.25677083333333334" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/activity_wallet.xml" value="0.264" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/fragment_account.xml" value="0.25677083333333334" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/fragment_campaign.xml" value="0.25677083333333334" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/fragment_campaign_detail.xml" value="0.24728260869565216" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/fragment_dashboard.xml" value="0.25677083333333334" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/fragment_setting.xml" value="0.25677083333333334" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/fragment_wallet.xml" value="0.176" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/item_campaign.xml" value="0.2" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/list_activity.xml" value="0.25677083333333334" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/layout/list_wallet.xml" value="0.25677083333333334" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/menu-v26/toolbar.xml" value="0.253125" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/menu/bottomnav.xml" value="0.25677083333333334" />
+        <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/menu/toolbar.xml" value="0.25677083333333334" />
+>>>>>>> Stashed changes
       </map>
     </option>
   </component>
