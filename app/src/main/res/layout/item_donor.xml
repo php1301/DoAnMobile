@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout_donor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/content_vertical"
+            android:layout_marginHorizontal="@dimen/content_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgv_donor"
+                android:layout_width="@dimen/_35mdp"
+                android:layout_height="@dimen/_35mdp"
+                android:src="@color/teal_200"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                app:layout_constraintStart_toEndOf="@id/imgv_donor">
+
+                <TextView
+                    android:id="@+id/name_donor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxLength="20"
+                    android:text="name"
+                    android:textSize="@dimen/text_normal"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/address_donor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="address"
+                    android:textColor="@color/darkgray"
+                    android:textSize="@dimen/text_small"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_donate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="1.5ETH"
+                android:textSize="@dimen/text_large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

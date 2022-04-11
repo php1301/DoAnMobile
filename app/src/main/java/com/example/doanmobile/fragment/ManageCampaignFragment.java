@@ -10,32 +10,29 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.doanmobile.R;
-import com.example.doanmobile.databinding.FragmentDashboardBinding;
-import com.example.doanmobile.databinding.FragmentWalletBinding;
 
-public class WalletFragment extends Fragment {
+import com.example.doanmobile.databinding.FragmentManageCampaignBinding;
 
-    FragmentWalletBinding binding;
+public class ManageCampaignFragment extends Fragment {
 
-    public WalletFragment() {
-        // Required empty public constructor
-    }
+    FragmentManageCampaignBinding binding;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentWalletBinding.inflate(getLayoutInflater());
+        binding = FragmentManageCampaignBinding.inflate(getLayoutInflater());
 
-        binding.txtvViewAll.setOnClickListener(new View.OnClickListener() {
+        binding.btnCreateCampaign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_walletFragment_to_activitiesListFragment);
+                Navigation.findNavController(view).navigate(R.id.action_manageCampaignFragment_to_createCampaignFragment);
             }
         });
 

@@ -13,7 +13,7 @@
         android:iconTint="@color/darkslategray">
     </item>
     <item
-        android:id="@+id/campaignFragment"
+        android:id="@+id/manageCampaignFragment"
         android:icon="@drawable/ic_volunteer_activism"
         android:title="Manage Campaign"
         android:iconTint="@color/darkslategray">

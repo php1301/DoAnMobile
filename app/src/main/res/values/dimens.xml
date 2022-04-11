@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    text -->
+    <dimen name="text_small">@dimen/_12font_mdp</dimen>
+    <dimen name="text_normal">@dimen/_15font_mdp</dimen>
+    <dimen name="text_large">@dimen/_18font_mdp</dimen>
+    <dimen name="text_xlarge">@dimen/_20font_mdp</dimen>
+
+<!--    margin, padding -->
+    <dimen name="layout_vertical">@dimen/_15mdp</dimen>
+    <dimen name="layout_horizontal">@dimen/_10mdp</dimen>
+    <dimen name="content_vertical">@dimen/_5mdp</dimen>
+    <dimen name="content_horizontal">@dimen/_5mdp</dimen>
+    <dimen name="padding_vertical">@dimen/_20mdp</dimen>
+    <dimen name="padding_horizontal">@dimen/_20mdp</dimen>
+
+    <dimen name="content_item_space">@dimen/_8mdp</dimen>
+    <dimen name="content_space">@dimen/_8mdp</dimen>
+
+    <dimen name="margin_top">@dimen/_10mdp</dimen>
+
+
+    <dimen name="card_radius">15dp</dimen>
+
+</resources>

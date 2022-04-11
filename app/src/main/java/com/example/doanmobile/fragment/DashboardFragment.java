@@ -5,15 +5,13 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.doanmobile.Campaign;
-import com.example.doanmobile.R;
+import com.example.doanmobile.model.Campaign;
 import com.example.doanmobile.adapter.CampaignAdapter;
 import com.example.doanmobile.databinding.FragmentDashboardBinding;
 
@@ -39,21 +37,7 @@ public class DashboardFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentDashboardBinding.inflate(getLayoutInflater());
 
-//        setSupportActionBar(binding.toolbarDashboard);
-//        getSupportActionBar().setDisplayShowTitleEnabled(false);
-
         createTestList();
-
-        binding.btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // action = DashboardFragmentDirections.action
-                Navigation.findNavController(view).navigate(R.id.action_dashboardFragment_to_campaignDetailFragment);
-            }
-        });
-
-       // setSupportActionBar(binding.toolbarDashboard);
-        //getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         // Initialize contacts
         return binding.getRoot();
@@ -62,13 +46,6 @@ public class DashboardFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        binding.btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                NavHostFragment.findNavController(DashboardFragment.this)
-//                        .navigate(R.id.campaign_to_campaigndetail);
-//            }
-//        });
     }
 
     public FragmentDashboardBinding createTestList(){
@@ -85,19 +62,4 @@ public class DashboardFragment extends Fragment {
         return binding;
     }
 
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.toolbar, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle item selection
-//        switch (item.getItemId()) {
-//            case R.id.toolbar_search:
-//            case R.id.toolbar_notification:
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//    }
 }

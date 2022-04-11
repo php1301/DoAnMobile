@@ -3,49 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.DashboardFragment"
     tools:ignore="MissingConstraints"
     android:orientation="vertical">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_40mdp"
-        android:background="@color/blue_mbg"
-        app:title=""
-        app:iconTint="@color/white"
-        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textColor="@color/white"
-            android:text="Dashboard"
-            android:textSize="@dimen/_18font_mdp"
-            android:textStyle="bold"/>
-    </androidx.appcompat.widget.Toolbar>
-
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="@dimen/_150mdp"
-        android:layout_height="@dimen/_50mdp"
-        android:text="hahaha"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_campaign"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="@dimen/_5mdp"
-            android:layout_marginVertical="@dimen/_5mdp"/>
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_campaign"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/layout_horizontal"
+                android:layout_marginVertical="@dimen/layout_vertical"/>
+
+        </RelativeLayout>
 
     </ScrollView>
-
 
 </LinearLayout>
 

@@ -7,11 +7,11 @@
         android:icon="@drawable/ic_search"
         app:showAsAction="always"
         android:title="Search"
-        android:iconTint="@color/white"/>
+        android:tint="@color/white"/>
     <item
         android:id="@+id/toolbar_notification"
         android:icon="@drawable/ic_notifications"
         app:showAsAction="always"
         android:title="Notification"
-        android:iconTint="@color/white"/>
+        android:tint="@color/white"/>
 </menu>

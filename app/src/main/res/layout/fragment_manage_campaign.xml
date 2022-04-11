@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ManageCampaignFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="@dimen/layout_vertical"
+            android:layout_marginHorizontal="@dimen/layout_horizontal">
+
+            <Button
+                android:id="@+id/btn_create_campaign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_15mdp"
+                android:paddingHorizontal="@dimen/padding_horizontal"
+                android:background="@drawable/round_button_r_b"
+                android:drawableStart="@drawable/ic_handshake_black_24dp_1"
+                android:drawablePadding="10dp"
+                android:text="Create New Campaign"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20mdp"
+                android:textStyle="bold"
+                android:text="Manage My Campaigns"
+                android:textSize="@dimen/text_large"
+                android:paddingStart="2dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/button"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
