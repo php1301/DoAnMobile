@@ -8,9 +8,12 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.transition.ChangeBounds;
+import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 
 import com.example.doanmobile.R;
 import com.example.doanmobile.adapter.DonorAdapter;
@@ -28,7 +31,6 @@ public class CampaignDetailFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -36,6 +38,8 @@ public class CampaignDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentCampaignDetailBinding.inflate(getLayoutInflater());
+
+        setSharedElementEnterTransition(new ChangeBounds());
 
         createTestList();
 

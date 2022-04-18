@@ -212,8 +212,7 @@
                         android:id="@+id/rv_activities_list"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginHorizontal="@dimen/_5mdp">
-                    </androidx.recyclerview.widget.RecyclerView>
+                        android:layout_marginHorizontal="@dimen/_5mdp"></androidx.recyclerview.widget.RecyclerView>
 
                 </LinearLayout>
 

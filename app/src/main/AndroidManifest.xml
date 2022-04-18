@@ -14,21 +14,22 @@
             android:name=".activity.SignUpActivity"
             android:exported="true"
             android:label="Sign_up"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/Theme.DoAnMobile" />
         <activity
             android:name=".activity.LoginActivity"
             android:exported="true"
             android:label="Login"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activity.MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.DoAnMobile">
+            android:theme="@style/splashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.DoAnMobile">
         </activity>
     </application>
 </manifest>

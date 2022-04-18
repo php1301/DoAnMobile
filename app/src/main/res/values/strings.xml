@@ -1,11 +1,10 @@
 <resources>
     <string name="app_name">DoAnMobile</string>
-    <string name="test_text">This project aims to construct two 20X40 feet greenhouses
-        (onsite at Urban Hijau and at NGO location), providing 50% of the harvest from
-        greenhouse directly to refugee and needy families at an estimated 15kg on a weekly
-        basis. Along with this, four dedicated urban farming master class workshops to provide
-        skills for minimum 20 underprivileged adult participants will be conducted along with
-        two children greenhouse/farm tours for refugee and needy youth groups</string>
+    <string name="test_text">The world is facing an unprecedented challenge with communities and economies everywhere affected by the growing COVID-19 pandemic.
+        The world is coming to combat the COVID-19 pandemic bringing governments, organizations from across industries and sectors and individuals together to help respond to this global outbreak.
+        The outpouring of global solidarity and support sparked by this shared challenge has been phenomenal.
+        Everyone can now support directly the response coordinated by WHO.
+        People and organizations who want to help fight the pandemic and support WHO and partners can now donate through the COVID-Solidarity Response Fund for WHO, powered by the WHO Foundation in collaboration with the UN Foundation and a global network of partners</string>
     <string name="language">Language</string>
     <string name="notifications">Notifications</string>
     <string name="support">Support</string>

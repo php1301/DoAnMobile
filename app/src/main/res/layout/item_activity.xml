@@ -13,7 +13,7 @@
         android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="@dimen/_10mdp"
+        android:layout_marginVertical="@dimen/content_horizontal"
         android:layout_marginHorizontal="@dimen/_5mdp"
         app:cardElevation="@dimen/_3mdp"
         app:cardPreventCornerOverlap="true"

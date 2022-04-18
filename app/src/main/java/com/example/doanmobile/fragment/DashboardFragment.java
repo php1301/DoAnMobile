@@ -49,11 +49,14 @@ public class DashboardFragment extends Fragment {
     }
 
     public FragmentDashboardBinding createTestList(){
-        Campaign campaign = new Campaign("abc");
+
+        Campaign campaign = new Campaign("AntiCOVID");
+
         campaignsList = new ArrayList<>();
 
         for (int i = 0; i < 5; i++)
             campaignsList.add(campaign);
+
         CampaignAdapter adapter = new CampaignAdapter(campaignsList, getContext());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         binding.rvCampaign.setAdapter(adapter);

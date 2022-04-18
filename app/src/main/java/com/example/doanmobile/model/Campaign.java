@@ -3,6 +3,7 @@ package com.example.doanmobile.model;
 public class Campaign {
     private String organizationName;
 
+
     public Campaign(String organizationName) {
         this.organizationName = organizationName;
     }

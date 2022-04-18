@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/layout_horizontal"
             android:layout_marginVertical="@dimen/layout_vertical"
+            android:paddingBottom="@dimen/padding_vertical"
             android:orientation="vertical">
 
             <LinearLayout

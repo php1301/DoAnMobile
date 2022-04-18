@@ -48,6 +48,7 @@ public class DonorsListFragment extends Fragment {
 
         for (int i = 0; i < 5; i++)
             donorsList.add(donor);
+
         DonorAdapter adapter = new DonorAdapter(donorsList, getContext());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         binding.rvDonorsList.setAdapter(adapter);

@@ -17,7 +17,11 @@
         tools:layout="@layout/fragment_dashboard" >
         <action
             android:id="@+id/action_dashboardFragment_to_campaignDetailFragment"
-            app:destination="@id/campaignDetailFragment" />
+            app:destination="@id/campaignDetailFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out" />
     </fragment>
     <fragment
         android:id="@+id/walletFragment"
@@ -26,7 +30,11 @@
         tools:layout="@layout/fragment_wallet" >
         <action
             android:id="@+id/action_walletFragment_to_activitiesListFragment"
-            app:destination="@id/activitiesListFragment" />
+            app:destination="@id/activitiesListFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/manageCampaignFragment"
@@ -35,7 +43,11 @@
         tools:layout="@layout/fragment_manage_campaign" >
         <action
             android:id="@+id/action_manageCampaignFragment_to_createCampaignFragment"
-            app:destination="@id/createCampaignFragment" />
+            app:destination="@id/createCampaignFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out" />
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
@@ -44,7 +56,11 @@
         tools:layout="@layout/fragment_setting" >
         <action
             android:id="@+id/action_settingFragment_to_loginActivity"
-            app:destination="@id/loginActivity" />
+            app:destination="@id/loginActivity"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/campaignDetailFragment"
@@ -53,13 +69,25 @@
         tools:layout="@layout/fragment_campaign_detail" >
         <action
             android:id="@+id/action_campaignDetailFragment_to_donateFragment"
-            app:destination="@id/donateFragment" />
+            app:destination="@id/donateFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out"/>
         <action
             android:id="@+id/action_campaignDetailFragment_to_donorsListFragment"
-            app:destination="@id/donorsListFragment" />
+            app:destination="@id/donorsListFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out"/>
         <action
             android:id="@+id/action_campaignDetailFragment_to_pathCampaignFragment"
-            app:destination="@id/pathCampaignFragment" />
+            app:destination="@id/pathCampaignFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/donateFragment"
@@ -87,7 +115,6 @@
         android:name="com.example.doanmobile.activity.SignUpActivity"
         android:label="Signup"
         tools:layout="@layout/activity_sign_up">
-
     </activity>
     <fragment
         android:id="@+id/activitiesListFragment"
