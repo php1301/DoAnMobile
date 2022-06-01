@@ -12,6 +12,12 @@ import com.example.doanmobile.databinding.ActivityLoginBinding;
 import com.example.doanmobile.databinding.ActivityMainBinding;
 import com.example.doanmobile.fragment.DashboardFragment;
 
+import java.util.Arrays;
+import java.util.List;
+
+import dev.pinkroom.walletconnectkit.WalletConnectKit;
+import dev.pinkroom.walletconnectkit.WalletConnectKitConfig;
+
 public class LoginActivity extends AppCompatActivity {
 
     ActivityLoginBinding binding;
@@ -29,8 +35,20 @@ public class LoginActivity extends AppCompatActivity {
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//                startActivity(intent);
+                List<String> list = Arrays.asList("haha");
+
+                WalletConnectKitConfig config = new WalletConnectKitConfig(
+                        LoginActivity.this,
+                        "https://bridge.walletconnect.org",
+                        "walletconnectkit.com",
+                        "WalletConnectKit",
+                        "abc",
+                        list
+                );
+
+                WalletConnectKit walletConnectKit = new WalletConnectKit.Builder(config).build();
             }
         });
     }

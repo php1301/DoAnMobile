@@ -50,15 +50,15 @@ public class ManageCampaignFragment extends Fragment {
     }
 
     public FragmentManageCampaignBinding createTestList(){
-        Campaign campaign = new Campaign("abc");
-        campaignsList = new ArrayList<>();
-
-        for (int i = 0; i < 5; i++)
-            campaignsList.add(campaign);
-        CampaignEditAdapter adapter = new CampaignEditAdapter(campaignsList, getContext());
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-        binding.rvCampaign.setAdapter(adapter);
-        binding.rvCampaign.setLayoutManager(linearLayoutManager);
+//        Campaign campaign = new Campaign("abc");
+//        campaignsList = new ArrayList<>();
+//
+//        for (int i = 0; i < 5; i++)
+//            campaignsList.add(campaign);
+//        CampaignEditAdapter adapter = new CampaignEditAdapter(campaignsList, getContext());
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+//        binding.rvCampaign.setAdapter(adapter);
+//        binding.rvCampaign.setLayoutManager(linearLayoutManager);
         // That's all!
         return binding;
     }

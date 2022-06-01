@@ -100,9 +100,11 @@
 package com.example.doanmobile.adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -113,6 +115,7 @@ import com.example.doanmobile.fragment.DashboardFragment;
 import com.example.doanmobile.model.Campaign;
 import com.example.doanmobile.R;
 import com.example.doanmobile.databinding.ItemCampaignBinding;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -133,7 +136,6 @@ public class CampaignAdapter extends RecyclerView.Adapter<CampaignAdapter.Campai
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
 
-
         // Inflate the custom layout
         View contactView = inflater.inflate(R.layout.item_campaign, parent, false);
 
@@ -146,7 +148,13 @@ public class CampaignAdapter extends RecyclerView.Adapter<CampaignAdapter.Campai
     public void onBindViewHolder(@NonNull CampaignViewHolder holder, int position) {
         Campaign campaign = campaignsList.get(position);
 
-        holder.txtvNameOrganization.setText(campaignsList.get(position).getOrganizationName());
+        holder.txtvNameOrganization.setText(campaign.getOrganizationName());
+
+        Picasso.get()
+                .load(Uri.parse(campaign.getCampaignBanner()))
+                .placeholder(R.drawable.campaignimg)
+                .error(R.drawable.campaignimg)
+                .into(holder.imgvCampaign);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -166,10 +174,12 @@ public class CampaignAdapter extends RecyclerView.Adapter<CampaignAdapter.Campai
     public class CampaignViewHolder extends RecyclerView.ViewHolder {
 
         TextView txtvNameOrganization;
+        ImageView imgvCampaign;
 
         public CampaignViewHolder(@NonNull View itemView) {
             super(itemView);
             txtvNameOrganization = (TextView) itemView.findViewById(R.id.txtv_name_organization);
+            imgvCampaign = (ImageView) itemView.findViewById(R.id.imgv_img_campaign);
         }
 
     }

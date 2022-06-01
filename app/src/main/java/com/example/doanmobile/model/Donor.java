@@ -2,6 +2,7 @@ package com.example.doanmobile.model;
 
 public class Donor {
     private String name;
+    private String address;
 
     public Donor(){ }
 
@@ -15,5 +16,13 @@ public class Donor {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
