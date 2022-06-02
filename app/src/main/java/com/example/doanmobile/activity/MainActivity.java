@@ -12,12 +12,25 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.doanmobile.GlobalVar;
 import com.example.doanmobile.R;
 import com.example.doanmobile.databinding.ActivityMainBinding;
+import com.google.gson.Gson;
+
+import org.walletconnect.Session;
+import org.web3j.crypto.Wallet;
+
+import java.util.Arrays;
+import java.util.List;
+
+import dev.pinkroom.walletconnectkit.WalletConnectKit;
+import dev.pinkroom.walletconnectkit.WalletConnectKitConfig;
+import kotlin.Unit;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
+    private WalletConnectKit walletConnectKit;
     ActivityMainBinding binding;
 
     @SuppressLint("ResourceAsColor")
@@ -33,6 +46,16 @@ public class MainActivity extends AppCompatActivity {
         createTopToolbar();
 
         bottomNavChangeFragment();
+        List<String> list = Arrays.asList("haha");
+
+        WalletConnectKitConfig config = new WalletConnectKitConfig(
+                MainActivity.this,
+                "https://bridge.walletconnect.org",
+                "https://betterfund.vercel.app/",
+                "WalletConnectKit",
+                "abc",
+                list
+        );
 
     }
 
@@ -71,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
+//         Handle item selection
         switch (item.getItemId()) {
             case R.id.toolbar_search:
             case R.id.toolbar_notification:

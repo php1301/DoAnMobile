@@ -63,5 +63,6 @@ dependencies {
     implementation ('org.web3j:core:4.8.7-android')
 
     implementation 'dev.pinkroom:walletconnectkit:0.3.2'
+    implementation 'com.google.code.gson:gson:2.9.0'
 
 }
