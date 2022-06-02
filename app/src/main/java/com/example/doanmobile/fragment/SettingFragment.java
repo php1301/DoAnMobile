@@ -43,24 +43,26 @@ public class SettingFragment extends Fragment {
         binding.cardviewLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Navigation.findNavController(view).navigate(R.id.action_settingFragment_to_loginActivity);
-//                WalletConnectKit walletConnectKit = GlobalVar.getInstance().getWalletConnectKit();
+                WalletConnectKit walletConnectKit = GlobalVar.getInstance().getWalletConnectKit();
+                walletConnectKit.removeSession();
+                Navigation.findNavController(view).navigate(R.id.action_settingFragment_to_loginActivity);
+//
 //                System.out.println(walletConnectKit.getSession());
 //                String data = "0xcd7a489e00000000000000000000000000000000000000000000000000038d7ea4c6800000000000000000000000000000000000000000000000000000000000000000e00000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000000000000000016000000000000000000000000000000000000000000000000000000000000001a000000000000000000000000000000000000000000000000000000000000001e0000000000000000000000000000000000000000000000000002386f26fc10000000000000000000000000000000000000000000000000000000000000000000b546573742061626364656600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000036767670000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002068747470733a2f2f692e696d6775722e636f6d2f79723274597a6f2e6a7065670000000000000000000000000000000000000000000000000000000000000018323032322d30362d30325430323a32383a35312e3337315a00000000000000000000000000000000000000000000000000000000000000000000000000000018323032322d30362d30325430323a32383a35312e3337315a0000000000000000";
-//
-//                walletConnectKit.getSession().performMethodCall(new Session
+//walletConnectKit.getSession().performMethodCall(new Session
 //                        .MethodCall
 //                        .SendTransaction(System.currentTimeMillis(), "0x4ddFf5E113FF403f193503c280DDf7723E53Ca11", "0xE124cEE21A6DE685D24AaC6487CC9AAB07350A38", "abc", "0x8a8c7838", "0x2b89ee", "0x0", data),
 //                        response -> {
-//                    System.out.println(response.getError());
+//                    System.out.println(response.getError().getMessage());
 //
 //                    return Unit.INSTANCE;
 //                });
 //                walletConnectKit.openWallet();
-                String url = "https://metamask.app.link/dapp/blockchain-charity.vercel.app/campaign/new";
-                Intent intent1 = new Intent(Intent.ACTION_VIEW);
-                intent1.setData(Uri.parse(url));
-                startActivity(intent1);
+//                String url = "https://metamask.app.link/dapp/blockchain-charity.vercel.app/campaign/new";
+//                Intent intent1 = new Intent(Intent.ACTION_VIEW);
+//                intent1.setData(Uri.parse(url));
+//                startActivity(intent1);
+
             }
         });
 
