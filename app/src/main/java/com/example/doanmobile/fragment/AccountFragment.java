@@ -1,5 +1,7 @@
 package com.example.doanmobile.fragment;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,11 +16,14 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ViewSwitcher;
 
+import com.example.doanmobile.GlobalVar;
+import com.example.doanmobile.LoadImageURL;
 import com.example.doanmobile.R;
 import com.example.doanmobile.adapter.ListWalletAdapter;
 import com.example.doanmobile.databinding.FragmentAccountBinding;
 import com.example.doanmobile.databinding.FragmentDashboardBinding;
 import com.example.doanmobile.model.MyListData;
+import com.example.doanmobile.model.UserDetail;
 
 public class AccountFragment extends Fragment {
 
@@ -46,7 +51,66 @@ public class AccountFragment extends Fragment {
             }
         });
 
-        createTestList();
+        UserDetail user = GlobalVar.getInstance().getProfile().getUser().getUser();
+        if (user.getAvatar() != null) {
+            LoadImageURL loadURL = new LoadImageURL(binding.avatar);
+            loadURL.execute(user.getAvatar());
+        }
+
+        if (user.getDisplayName() != null) {
+            binding.textUsername.setText(user.getDisplayName());
+        } else binding.textUsername.setText("");
+
+        if (user.getFirstName() != null && user.getLastName() != null) {
+            binding.textName.setText(user.getFirstName() + " " + user.getLastName());
+        } else binding.textName.setText("");
+
+        if (user.getEmail() != null) {
+            binding.textEmail.setText(user.getEmail());
+        } else binding.textEmail.setText("");
+
+        if (user.getPhone() != null) {
+            binding.textPhone.setText(user.getPhone());
+        } else binding.textPhone.setText("");
+
+        if (user.getFacebookUrl() != null) {
+            binding.imgvFacebook.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse(user.getFacebookUrl()));
+                    startActivity(intent);
+                }
+            });
+        } else binding.imgvFacebook.setVisibility(View.INVISIBLE);
+
+        if (user.getInstagramUrl() != null) {
+            binding.imgvInsta.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse(user.getInstagramUrl()));
+                    startActivity(intent);
+                }
+            });
+        } else binding.imgvInsta.setVisibility(View.INVISIBLE);
+
+        if (user.getYoutubeUrl() != null) {
+            binding.imgvYoutube.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse(user.getYoutubeUrl()));
+                    startActivity(intent);
+                }
+            });
+        } else binding.imgvYoutube.setVisibility(View.INVISIBLE);
 
         return binding.getRoot();
     }
@@ -56,28 +120,4 @@ public class AccountFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    public FragmentAccountBinding createTestList(){
-        MyListData[] myListData = new MyListData[] {
-                new MyListData("Wallet", "123", android.R.drawable.ic_dialog_email),
-                new MyListData("Wallet", "123", android.R.drawable.ic_dialog_info),
-                new MyListData("Wallet", "123", android.R.drawable.ic_delete),
-                new MyListData("Wallet", "123", android.R.drawable.ic_dialog_dialer),
-                new MyListData("Wallet", "123", android.R.drawable.ic_dialog_alert),
-                new MyListData("Wallet", "123", android.R.drawable.ic_dialog_map),
-                new MyListData("Wallet", "123", android.R.drawable.ic_dialog_email),
-                new MyListData("Wallet", "123", android.R.drawable.ic_dialog_info),
-                new MyListData("Wallet", "123", android.R.drawable.ic_delete),
-                new MyListData("Wallet", "123", android.R.drawable.ic_dialog_dialer),
-                new MyListData("Wallet", "123", android.R.drawable.ic_dialog_alert),
-                new MyListData("Wallet", "123", android.R.drawable.ic_dialog_map),
-        };
-
-        RecyclerView recyclerView = binding.rvWalletList;
-        ListWalletAdapter adapter = new ListWalletAdapter(myListData);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(adapter);
-
-        return binding;
-    }
 }

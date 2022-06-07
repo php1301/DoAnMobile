@@ -23,19 +23,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/avatar"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/avatar_bg"
                     android:layout_width="@dimen/_80mdp"
                     android:layout_height="@dimen/_80mdp"
-                    android:background="@drawable/oval_shape"
-                    android:scaleType="center"
-                    android:src="@drawable/ic_person_outline_24"
-                    android:backgroundTint="@color/gray_oval"
-                    android:contentDescription="Avatar"
+                    app:cardCornerRadius="250dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent" >
+                    <ImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/oval_shape"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_person_outline_24"
+                        android:backgroundTint="@color/gray_oval"
+                        android:contentDescription="Avatar" />
+                </androidx.cardview.widget.CardView>
 
                 <ImageButton
                     android:id="@+id/btn_avatar"
@@ -44,11 +50,12 @@
                     android:background="@drawable/blue_oval_shape"
                     android:contentDescription="Choose a picture"
                     android:src="@drawable/ic_camera_24"
-                    app:layout_constraintBottom_toBottomOf="@+id/avatar"
-                    app:layout_constraintEnd_toEndOf="@+id/avatar"
+                    android:translationZ="5dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/avatar_bg"
+                    app:layout_constraintEnd_toEndOf="@+id/avatar_bg"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/avatar"
-                    app:layout_constraintTop_toTopOf="@+id/avatar"
+                    app:layout_constraintStart_toStartOf="@+id/avatar_bg"
+                    app:layout_constraintTop_toTopOf="@+id/avatar_bg"
                     app:layout_constraintVertical_bias="1.0" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -270,45 +277,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/_20mdp"
-                android:orientation="vertical"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
                 app:layout_constraintTop_toBottomOf="@id/constraintlayout_info">
 
-                <RelativeLayout
-                    android:id="@+id/relativelayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imgv_facebook"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_facebook">
+                </ImageView>
 
-                    <TextView
-                        android:id="@+id/label_my_wallet"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_5mdp"
-                        android:text="@string/my_wallet"
-                        android:textAllCaps="false"
-                        android:textSize="@dimen/text_large"
-                        android:textStyle="bold" />
+                <Space
+                    android:layout_width="@dimen/_10mdp"
+                    android:layout_height="0dp"/>
 
-                    <ImageView
-                        android:id="@+id/imgv_edit_wallet"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginEnd="@dimen/_5mdp"
-                        android:contentDescription="Edit"
-                        app:srcCompat="@drawable/ic_edit"
-                        app:tint="@color/darkgray">
-                    </ImageView>
+                <ImageView
+                    android:id="@+id/imgv_insta"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_instagram">
+                </ImageView>
 
-                </RelativeLayout>
+                <Space
+                    android:layout_width="@dimen/_10mdp"
+                    android:layout_height="0dp"/>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_wallet_list"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:nestedScrollingEnabled="false"
-                    app:layout_constraintTop_toBottomOf="@+id/relativelayout">
-
-                </androidx.recyclerview.widget.RecyclerView>
+                <ImageView
+                    android:id="@+id/imgv_youtube"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_youtube">
+                </ImageView>
 
             </LinearLayout>
 
