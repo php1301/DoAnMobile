@@ -65,6 +65,27 @@
         <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/menu/toolbar.xml" value="0.25677083333333334" />
         <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/mipmap-anydpi-v26/ic_charity_logo.xml" value="0.1945" />
         <entry key="..\:/STUDY/UIT/Mobile Application Development/Code/DoAnMobile/app/src/main/res/mipmap-anydpi-v26/ic_logo.xml" value="0.1945" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/actionbar_layout.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/actionbar_layout_donorslist.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/actionbar_layout_information.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/activity_sign_up.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/fragment_account.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/fragment_activities_list.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/fragment_campaign_detail.xml" value="0.176" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/fragment_create_campaign.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/fragment_dashboard.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/fragment_donate.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/fragment_donors_list.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/fragment_manage_campaign.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/fragment_path_campaign.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/fragment_setting.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/fragment_wallet.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/item_activity.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/item_campaign.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/item_donor.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Project_Mobile_Final/DoAnMobile/app/src/main/res/layout/list_wallet.xml" value="0.22826086956521738" />
       </map>
     </option>
   </component>

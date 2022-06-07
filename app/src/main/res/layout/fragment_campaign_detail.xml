@@ -34,7 +34,7 @@
                         android:id="@+id/imgv_avatar_organization"
                         android:layout_width="@dimen/_40mdp"
                         android:layout_height="@dimen/_40mdp"
-                        android:src="@color/teal_200"/>
+                        android:src="@color/teal_200" />
 
                     <TextView
                         android:id="@+id/txtv_name_organization"
@@ -43,9 +43,9 @@
                         android:layout_marginStart="@dimen/_10mdp"
                         android:text="Organization"
                         android:textSize="@dimen/text_normal"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/imgv_avatar_organization"/>
+                        app:layout_constraintStart_toEndOf="@id/imgv_avatar_organization"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -53,9 +53,9 @@
                         android:layout_marginStart="@dimen/_10mdp"
                         android:src="@drawable/ic_verified"
                         android:tint="@color/blue_mbg"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/txtv_name_organization"/>
+                        app:layout_constraintStart_toEndOf="@id/txtv_name_organization"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -67,13 +67,13 @@
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/imgv_img_campaign"
-                        android:transitionName="anim_campaign"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_150mdp"
                         android:maxHeight="@dimen/_100mdp"
                         android:scaleType="centerCrop"
-                        app:shapeAppearanceOverlay="@style/imgv_rounded"
-                        android:src="@drawable/campaignimg"/>
+                        android:src="@drawable/campaignimg"
+                        android:transitionName="anim_campaign"
+                        app:shapeAppearanceOverlay="@style/imgv_rounded" />
 
                     <TextView
                         android:id="@+id/txtv_name_campaign"
@@ -81,21 +81,21 @@
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="@dimen/_10mdp"
                         android:text="COVID-19 Vaccine Support Fund"
-                        android:textStyle="bold"
                         android:textSize="@dimen/text_large"
-                        app:layout_constraintTop_toBottomOf="@id/imgv_img_campaign"/>
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/imgv_img_campaign" />
 
                     <ProgressBar
                         android:id="@+id/pgb_campaign"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_8mdp"
                         android:layout_marginVertical="@dimen/_10mdp"
-                        android:progress="50"
                         android:max="100"
+                        android:progress="50"
                         android:progressTint="@color/aquamarine"
                         android:scaleY="2"
-                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                        app:layout_constraintTop_toBottomOf="@id/txtv_name_campaign"/>
+                        app:layout_constraintTop_toBottomOf="@id/txtv_name_campaign" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/constraint_detail"
@@ -114,17 +114,17 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="5500"
+                                android:textColor="@color/blue_mbg"
                                 android:textSize="@dimen/text_xlarge"
-                                android:textStyle="bold"
-                                android:textColor="@color/blue_mbg" />
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:id="@+id/txtv_target_eth"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="/10000 ETH"
-                                android:textSize="@dimen/text_xlarge"
-                                android:textColor="@color/darkgray" />
+                                android:textColor="@color/darkgray"
+                                android:textSize="@dimen/text_xlarge" />
 
                         </LinearLayout>
 
@@ -132,22 +132,21 @@
                             android:id="@+id/crv_dayleft"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:theme="@style/Theme.MaterialComponents.Light"
                             app:cardCornerRadius="@dimen/_20mdp"
-                            app:strokeColor="@color/blue_mbg"
-                            app:strokeWidth="1dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/linearLayout_money"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:theme="@style/Theme.MaterialComponents.Light">
+                            app:layout_constraintTop_toTopOf="parent">
 
-                            <TextView
+                            <Button
+                                android:id="@+id/btn_withdrawal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:paddingHorizontal="@dimen/_10mdp"
-                                android:text="20 days left"
-                                android:textSize="@dimen/text_small"
-                                android:textColor="@color/blue_mbg"/>
+                                android:paddingHorizontal="@dimen/_8mdp"
+                                android:text="View Withdrawal"
+                                android:textColor="@color/blue_mbg"
+                                android:textSize="@dimen/text_small" />
 
                         </com.google.android.material.card.MaterialCardView>
 
@@ -156,9 +155,10 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_10mdp"
+                        android:layout_marginTop="24dp"
                         android:orientation="horizontal"
-                        app:layout_constraintTop_toBottomOf="@id/constraint_detail">
+                        app:layout_constraintTop_toBottomOf="@id/constraint_detail"
+                        tools:layout_editor_absoluteX="-169dp">
 
                         <LinearLayout
                             android:id="@+id/linear_achieve"
@@ -170,9 +170,9 @@
                                 android:id="@+id/txtv_achieve"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:text="Achieve"
                                 android:textColor="@color/darkgray"
-                                android:textSize="@dimen/text_normal"
-                                android:text="Achieve"/>
+                                android:textSize="@dimen/text_normal" />
 
                             <TextView
                                 android:id="@+id/txtv_percent_campaign"
@@ -180,15 +180,15 @@
                                 android:layout_height="wrap_content"
                                 android:text="55%"
                                 android:textSize="@dimen/text_large"
-                                app:layout_constraintTop_toBottomOf="@id/txtv_achieve"/>
+                                app:layout_constraintTop_toBottomOf="@id/txtv_achieve" />
 
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:layout_marginStart="@dimen/_10mdp"
+                            android:orientation="vertical"
                             app:layout_constraintStart_toEndOf="@+id/linear_achieve">
 
                             <TextView
@@ -199,7 +199,7 @@
                                 android:textColor="@color/darkgray"
                                 android:textSize="@dimen/text_normal"
                                 app:layout_constraintStart_toEndOf="@id/txtv_achieve"
-                                app:layout_constraintTop_toBottomOf="@id/txtv_gain_eth"/>
+                                app:layout_constraintTop_toBottomOf="@id/txtv_gain_eth" />
 
                             <TextView
                                 android:id="@+id/txtv_numdonate_campaign"
@@ -208,11 +208,20 @@
                                 android:text="105"
                                 android:textSize="@dimen/text_large"
                                 app:layout_constraintStart_toEndOf="@id/txtv_percent_campaign"
-                                app:layout_constraintTop_toBottomOf="@id/txtv_achieve"/>
+                                app:layout_constraintTop_toBottomOf="@id/txtv_achieve" />
 
                         </LinearLayout>
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtv_lb_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campaign Information"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold"
+                        tools:layout_editor_absoluteY="250dp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -221,13 +230,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30mdp"
                     android:layout_marginVertical="@dimen/_10mdp"
+                    android:background="@drawable/rounded_blue_btn"
                     android:gravity="center"
                     android:text="Donate"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_normal"
-                    android:background="@drawable/rounded_blue_btn"/>
-
+                    android:textSize="@dimen/text_normal" />
             </LinearLayout>
 
             <View
@@ -242,34 +250,12 @@
                 android:layout_marginVertical="@dimen/content_vertical">
 
                 <TextView
-                    android:id="@+id/txtv_lb_info"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Campaign Information"
-                    android:textSize="@dimen/text_large"
-                    android:textStyle="bold"/>
-
-                <TextView
                     android:id="@+id/txtv_info"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
                     android:textSize="@dimen/text_normal"
-                    android:text="This Campaign is to Donate Funds for Covid Relief in India, the situation. The manager is https://twitter.com/harshbadhai28 and all the receives will go to ABCD Foundation which will help in buying, delivering oxygen, and other covid related help. If you want to withdraw funds from this campaign please feel free to create a request, and ping me on Twitter so that I can help you get the funds as soon as possible."
-                    app:layout_constraintTop_toBottomOf="@+id/txtv_lb_info"/>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_info_viewall"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_30mdp"
-                    android:gravity="center"
-                    android:layout_marginVertical="@dimen/_10mdp"
-                    android:background="@drawable/rounded_white_btn"
-                    android:textSize="@dimen/text_normal"
-                    android:text="View All"
-                    android:textAllCaps="false"
-                    android:textColor="@color/blue_mbg"
-                    app:layout_constraintTop_toBottomOf="@id/txtv_info"/>
+                    android:text="This Campaign is to Donate Funds for Covid Relief in India, the situation. The manager is https://twitter.com/harshbadhai28 and all the receives will go to ABCD Foundation which will help in buying, delivering oxygen, and other covid related help. If you want to withdraw funds from this campaign please feel free to create a request, and ping me on Twitter so that I can help you get the funds as soon as possible."/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -289,7 +275,7 @@
                     android:id="@+id/txtv_lb_donorslist"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Donors List"
+                    android:text="Road map"
                     android:textSize="@dimen/text_large"
                     android:textStyle="bold"/>
 
@@ -305,20 +291,6 @@
 <!--                    android:layout_height="wrap_content"-->
 <!--                    android:foregroundGravity="center"-->
 <!--                    app:layout_constraintTop_toBottomOf="@+id/txtv_lb_donorslist"/>-->
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_donors_viewall"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_30mdp"
-                    android:layout_marginVertical="@dimen/margin_top"
-                    android:gravity="center"
-                    android:background="@drawable/rounded_white_btn"
-                    android:text="View All"
-                    android:textSize="@dimen/text_normal"
-                    android:textAllCaps="false"
-                    android:textColor="@color/blue_mbg"
-                    app:layout_constraintTop_toBottomOf="@id/rv_donors_list"/>
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
