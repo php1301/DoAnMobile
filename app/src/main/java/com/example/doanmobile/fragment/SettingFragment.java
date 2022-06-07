@@ -58,6 +58,10 @@ public class SettingFragment extends Fragment {
 //                    return Unit.INSTANCE;
 //                });
 //                walletConnectKit.openWallet();
+                String url = "https://metamask.app.link/dapp/blockchain-charity.vercel.app/campaign/new";
+                Intent intent1 = new Intent(Intent.ACTION_VIEW);
+                intent1.setData(Uri.parse(url));
+                startActivity(intent1);
 
 
             }

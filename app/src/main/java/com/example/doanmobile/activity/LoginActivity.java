@@ -73,6 +73,7 @@ public class LoginActivity extends AppCompatActivity implements Session.Callback
                         session = walletConnectKit.getSession();
                         walletConnectKit.setSession(session);
                         System.out.println("You are connected with account: " + address);
+                        Log.d("Address: ", address);
                         GlobalVar.getInstance().setWalletConnectKit(walletConnectKit);
                         GlobalVar.getInstance().setUserid(address);
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);

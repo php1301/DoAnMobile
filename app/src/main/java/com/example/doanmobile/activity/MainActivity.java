@@ -21,12 +21,19 @@ import com.example.doanmobile.databinding.ActivityMainBinding;
 import com.example.doanmobile.model.ResCampaignSummary;
 import com.example.doanmobile.model.ResDeployedCampaigns;
 import com.example.doanmobile.model.ResViewProfile;
+import com.google.gson.Gson;
+
+import org.walletconnect.Session;
+import org.web3j.crypto.Wallet;
+
 
 import java.util.Arrays;
 import java.util.List;
 
 import dev.pinkroom.walletconnectkit.WalletConnectKit;
 import dev.pinkroom.walletconnectkit.WalletConnectKitConfig;
+import kotlin.Unit;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -36,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private WalletConnectKit walletConnectKit;
     ActivityMainBinding binding;
+
     private int temp;
     private String sort="new";
     private String address="0xa5b0B408D996627C0264a34080CD4CA397a66D5E";
@@ -45,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-
 
         setSupportActionBar(binding.toolbarDashboard);
 
@@ -65,6 +72,11 @@ public class MainActivity extends AppCompatActivity {
         getDeployedCampaign(sort);
 
 //        getProfile(uid);
+
+//        getProfile(GlobalVar.getInstance().getUserid());
+        getProfile(uid);
+        getDeployedCampaign(sort);
+//        getCampaignsummary(address);
 
     }
 
@@ -111,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
     public void getDeployedCampaign(String sort){
         Api api = RetrofitClient.getRetrofitInstance().create(Api.class);
         Call<ResDeployedCampaigns> call=api.getDeployedCampaign(sort);
@@ -178,4 +191,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }

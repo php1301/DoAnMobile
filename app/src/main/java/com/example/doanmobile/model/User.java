@@ -9,15 +9,19 @@ public class User {
     @SerializedName("user")
     @Expose
     private UserDetail user;
+
     @SerializedName("userCampaigns")
     @Expose
     private List<String> userCampaigns = null;
+
     @SerializedName("numberOfCampaigns")
     @Expose
     private Integer numberOfCampaigns;
+
     @SerializedName("totalDonationReceived")
     @Expose
     private Double totalDonationReceived;
+
     @SerializedName("finalizeRate")
     @Expose
     private Integer finalizeRate;

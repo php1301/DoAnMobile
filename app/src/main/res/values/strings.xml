@@ -12,7 +12,7 @@
     <string name="logout">Logout</string>
     <string name="personal_information">Personal Information</string>
     <string name="name">Name</string>
-    <string name="username">Username</string>
+    <string name="username">User</string>
     <string name="email">Email</string>
     <string name="phone">Phone</string>
     <string name="my_wallet">My Wallet</string>

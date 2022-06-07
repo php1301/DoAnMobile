@@ -9,9 +9,11 @@ public class ResDeployedCampaigns {
     @SerializedName("list")
     @Expose
     private List<String> list = null;
+
     @SerializedName("sorted")
     @Expose
-    private List<Object> sorted = null;
+    private List<String> sorted = null;
+
 
     public List<String> getList() {
         return list;
@@ -21,11 +23,12 @@ public class ResDeployedCampaigns {
         this.list = list;
     }
 
-    public List<Object> getSorted() {
+    public List<String> getSorted() {
         return sorted;
     }
 
-    public void setSorted(List<Object> sorted) {
-        this.sorted = sorted;
+    public void setSorted(List<String> sorted) {
+
+          this.sorted = sorted;
     }
 }

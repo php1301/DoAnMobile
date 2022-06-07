@@ -6,13 +6,12 @@ import com.google.gson.annotations.SerializedName;
 public class ResViewProfile {
     @SerializedName("user")
     @Expose
-    private User users;
+    private User user;
 
     public User getUser() {
-        return users;
+        return user;
     }
 
-    public void setUser(User users) {
-        this.users = users;
-    }
+    public void setUser(User user) {
+        this.user = user;
 }
