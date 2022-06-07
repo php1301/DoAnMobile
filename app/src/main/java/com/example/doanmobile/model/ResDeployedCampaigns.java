@@ -14,6 +14,7 @@ public class ResDeployedCampaigns {
     @Expose
     private List<String> sorted = null;
 
+
     public List<String> getList() {
         return list;
     }
@@ -27,6 +28,7 @@ public class ResDeployedCampaigns {
     }
 
     public void setSorted(List<String> sorted) {
-        this.sorted = sorted;
+
+          this.sorted = sorted;
     }
 }

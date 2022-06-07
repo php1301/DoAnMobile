@@ -31,13 +31,23 @@ public interface Api {
     @POST("/dev/auth/login")
     Call<Object> login (
             @Field("walletAddr") String walletAddr);
-
     @GET("/dev/campaigns/get-deployed-campaigns/{sort}")
     Call<ResDeployedCampaigns> getDeployedCampaign(@Path("sort") String sort);
-
     @GET("/dev/campaigns/get-campaign-summary/{address}")
     Call<ResCampaignSummary> getCampaignsummary(@Path("address") String address);
-
     @GET("/dev/users/view-profile/{uid}")
     Call<ResViewProfile> getProfile(@Path("uid") String uid);
+    @POST("/dev/campaigns/contribute-campaign")
+    Call<Object> contributeCampaign (
+            @Field("walletAddr") String walletAddr,
+            @Field("value") String value,
+            @Field("address") String adress
+    );
+    @POST("/dev/campaigns/contribute-campaign-fb")
+    Call<Object> contributeCampaignFb (
+            @Field("walletAddr") String walletAddr,
+            @Field("value") String value,
+            @Field("address") String adress
+    );
+
 }

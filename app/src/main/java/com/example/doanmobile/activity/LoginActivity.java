@@ -69,10 +69,6 @@ public class LoginActivity extends AppCompatActivity implements Session.Callback
             @Override
             public void onClick(View view) {
                 try {
-
-
-
-
                     binding.btnLogin.start(walletConnectKit, address -> {
                         session = walletConnectKit.getSession();
                         walletConnectKit.setSession(session);

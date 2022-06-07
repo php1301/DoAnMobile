@@ -144,14 +144,6 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             android:theme="@style/Theme.MaterialComponents.Light">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:paddingHorizontal="@dimen/_10mdp"
-                                android:text="20 days left"
-                                android:textSize="@dimen/text_small"
-                                android:textColor="@color/blue_mbg"/>
-
                         </com.google.android.material.card.MaterialCardView>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

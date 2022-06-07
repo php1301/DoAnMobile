@@ -26,12 +26,14 @@ import com.google.gson.Gson;
 import org.walletconnect.Session;
 import org.web3j.crypto.Wallet;
 
+
 import java.util.Arrays;
 import java.util.List;
 
 import dev.pinkroom.walletconnectkit.WalletConnectKit;
 import dev.pinkroom.walletconnectkit.WalletConnectKitConfig;
 import kotlin.Unit;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -42,16 +44,14 @@ public class MainActivity extends AppCompatActivity {
     private WalletConnectKit walletConnectKit;
     ActivityMainBinding binding;
 
-    private String sort = "new";
-    private String address = "0xa5b0B408D996627C0264a34080CD4CA397a66D5E";
-    private String uid = "0x4ddFf5E113FF403f193503c280DDf7723E53Ca11";
     private int temp;
-
+    private String sort="new";
+    private String address="0xa5b0B408D996627C0264a34080CD4CA397a66D5E";
+    private String uid="0x4ddFf5E113FF403f193503c280DDf7723E53Ca11";
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = ActivityMainBinding.inflate(getLayoutInflater());
 
         setSupportActionBar(binding.toolbarDashboard);
@@ -69,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
                 "abc",
                 list
         );
+        getDeployedCampaign(sort);
+
+//        getProfile(uid);
 
 //        getProfile(GlobalVar.getInstance().getUserid());
         getProfile(uid);

@@ -43,16 +43,16 @@ public class DonorsListFragment extends Fragment {
     }
 
     public FragmentDonorsListBinding createTestList(){
-        Donor donor = new Donor("abc");
-        ArrayList<Donor> donorsList = new ArrayList<>();
-
-        for (int i = 0; i < 5; i++)
-            donorsList.add(donor);
-
-        DonorAdapter adapter = new DonorAdapter(donorsList, getContext());
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-        binding.rvDonorsList.setAdapter(adapter);
-        binding.rvDonorsList.setLayoutManager(linearLayoutManager);
+//        Donor donor = new Donor("abc");
+//        ArrayList<Donor> donorsList = new ArrayList<>();
+//
+//        for (int i = 0; i < 5; i++)
+//            donorsList.add(donor);
+//
+//        DonorAdapter adapter = new DonorAdapter(donorsList, getContext());
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+//        binding.rvDonorsList.setAdapter(adapter);
+//        binding.rvDonorsList.setLayoutManager(linearLayoutManager);
 
         return binding;
     }
