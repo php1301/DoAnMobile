@@ -122,6 +122,8 @@ import com.example.doanmobile.databinding.ItemCampaignBinding;
 import com.example.doanmobile.model.ResCampaignSummary;
 import com.squareup.picasso.Picasso;
 
+import org.web3j.utils.Convert;
+
 import java.util.List;
 
 public class CampaignAdapter extends RecyclerView.Adapter<CampaignAdapter.CampaignViewHolder> {
@@ -129,9 +131,7 @@ public class CampaignAdapter extends RecyclerView.Adapter<CampaignAdapter.Campai
     private List<ResCampaignSummary> campaignsList;
     private Context context;
     ItemCampaignBinding binding;
-    private long gain;
-    private long target;
-    private long percent;
+
     public CampaignAdapter(List<ResCampaignSummary> campaignsList, Context context) {
         this.campaignsList = campaignsList;
         this.context = context;
@@ -155,17 +155,19 @@ public class CampaignAdapter extends RecyclerView.Adapter<CampaignAdapter.Campai
     @Override
     public void onBindViewHolder(@NonNull CampaignViewHolder holder, @SuppressLint("RecyclerView") int position) {
         ResCampaignSummary campaign = campaignsList.get(position);
-
+         long gain;
+         long target;
+         long percent;
         holder.txtvNameOrganization.setText(campaign.getSummary().getManager());
 
         holder.txtvNameCampaign.setText(campaign.getSummary().getName());
-        gain= Long.parseLong(campaign.getSummary().getMinimumContribution());
+        gain= Long.parseLong(campaign.getSummary().getBalance());
         target= Long.parseLong(campaign.getSummary().getTarget());
         percent=gain*100/target;
         holder.pgbCampaign.setProgress(Math.toIntExact(percent));
         holder.txtvPercentCampaign.setText(String.valueOf(percent)+"%");
-        holder.txtvGainEth.setText((campaign.getSummary().getMinimumContribution()));
-        holder.txtvTargetEth.setText("/"+String.valueOf(target)+" ETH");
+        holder.txtvGainEth.setText((  Convert.fromWei(campaign.getSummary().getBalance(), Convert.Unit.ETHER).toString()  ));
+        holder.txtvTargetEth.setText("/"+Convert.fromWei(campaign.getSummary().getTarget(), Convert.Unit.ETHER).toString()+" ETH");
         holder.txtvNumdonateCampaign.setText(campaign.getSummary().getApproversCount());
         Picasso.get()
                 .load(Uri.parse(campaign.getSummary().getImage()))

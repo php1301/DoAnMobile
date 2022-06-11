@@ -86,7 +86,7 @@
                 </TextView>
 
                 <TextView
-
+                    android:id="@+id/walletAdressOfCamCrea"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -121,7 +121,7 @@
                 </TextView>
 
                 <TextView
-
+                    android:id="@+id/yourWalletAdress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -153,7 +153,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/customize_cam_in_r"
                         android:ems="10"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:padding="12dp"
                         android:textColor="@color/black"
                         android:textSize="@dimen/text_normal"
@@ -184,11 +184,12 @@
                 </TextView>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btndonate"
+                    android:id="@+id/btndonate1"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30mdp"
                     android:layout_marginTop="@dimen/margin_top"
                     android:gravity="center"
+                    android:clickable="true"
                     android:text="Donate"
                     android:textAllCaps="false"
                     android:textColor="@color/white"

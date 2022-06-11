@@ -69,13 +69,13 @@ public class MainActivity extends AppCompatActivity {
                 "abc",
                 list
         );
+        getProfile(GlobalVar.getInstance().getUserid());
         getDeployedCampaign(sort);
 
 //        getProfile(uid);
 
-//        getProfile(GlobalVar.getInstance().getUserid());
-        getProfile(uid);
-        getDeployedCampaign(sort);
+//        getProfile(uid);
+//        getDeployedCampaign(sort);
 //        getCampaignsummary(address);
 
     }

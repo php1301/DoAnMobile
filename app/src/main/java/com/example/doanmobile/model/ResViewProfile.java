@@ -14,4 +14,5 @@ public class ResViewProfile {
 
     public void setUser(User user) {
         this.user = user;
+    }
 }

@@ -57,7 +57,7 @@ public class DashboardFragment extends Fragment {
 //        campaignsList.add( new Campaign("AntiCOVID", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrEejUt9id9JnFZyvW8rUJDQ0jVKmPtkJHuMbLV4i4ydP0fAMDkiWx__Dd4MuGawEdEaA&usqp=CAU"));
 //        campaignsList.add( new Campaign("Global Forest", "https://en.baoquocte.vn/stores/news_dataimages/lananh/032022/04/11/in_article/adb-ho-tro-15-trieu-usd-phat-trien-lam-nghiep-ben-vung-o-dong-nam-a.jpg?rt=20220304145227"));
 //        campaignsList.add( new Campaign("ChildFund", "https://media.globalcitizen.org/thumbnails/9b/bd/9bbd86a1-4827-4243-b033-dcbd2e7fe5a5/nedbankchildprotectionandsafety.jpg__1600x900_q85_crop_subsampling-2.jpg"));
-            Log.e( "createTestList: ", String.valueOf(GlobalVar.getInstance().getCampainSummary().size()));
+//            Log.e( "createTestList: ", String.valueOf(GlobalVar.getInstance().getCampainSummary().size()));
             CampaignAdapter adapter = new CampaignAdapter(GlobalVar.getInstance().getCampainSummary(), getContext());
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
             binding.rvCampaign.setAdapter(adapter);
@@ -66,5 +66,4 @@ public class DashboardFragment extends Fragment {
         // That's all!
         return binding;
     }
-
 }
