@@ -6,6 +6,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -53,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-
         setSupportActionBar(binding.toolbarDashboard);
 
         createTopToolbar();
@@ -138,6 +138,16 @@ public class MainActivity extends AppCompatActivity {
                     if (size == 0)
                     {
                         setContentView(binding.getRoot());
+                        final SwipeRefreshLayout pullToRefresh = findViewById(R.id.swipeRefreshLayout);
+                        pullToRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+                            @Override
+                            public void onRefresh() {
+                                System.out.println("request pull to refresh at dashboard");
+                                getDeployedCampaign(sort);
+                                pullToRefresh.setRefreshing(false);
+                            }
+                        });
+
                     }
                     else {
                         for (String l:list.getList()) {
@@ -164,6 +174,15 @@ public class MainActivity extends AppCompatActivity {
                     temp++;
                     if (temp == t) {
                         setContentView(binding.getRoot());
+                        final SwipeRefreshLayout pullToRefresh = findViewById(R.id.swipeRefreshLayout);
+                        pullToRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+                            @Override
+                            public void onRefresh() {
+                                System.out.println("request pull to refresh at dashboard");
+                                getDeployedCampaign(sort);
+                                pullToRefresh.setRefreshing(false);
+                            }
+                        });
                     }
                 }
             }

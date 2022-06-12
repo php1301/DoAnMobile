@@ -9,21 +9,30 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ViewSwitcher;
 
+import com.example.doanmobile.Api;
 import com.example.doanmobile.GlobalVar;
 import com.example.doanmobile.LoadImageURL;
 import com.example.doanmobile.R;
+import com.example.doanmobile.RetrofitClient;
 import com.example.doanmobile.adapter.ListWalletAdapter;
 import com.example.doanmobile.databinding.FragmentAccountBinding;
 import com.example.doanmobile.databinding.FragmentDashboardBinding;
 import com.example.doanmobile.model.MyListData;
+import com.example.doanmobile.model.ResViewProfile;
 import com.example.doanmobile.model.UserDetail;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class AccountFragment extends Fragment {
 
@@ -32,6 +41,7 @@ public class AccountFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
@@ -111,7 +121,14 @@ public class AccountFragment extends Fragment {
                 }
             });
         } else binding.imgvYoutube.setVisibility(View.INVISIBLE);
-
+        binding.swipeRefreshLayoutatAccountFrag.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                System.out.println("request pull to refresh at Profile");
+                getProfile(GlobalVar.getInstance().getUserid());
+                binding.swipeRefreshLayoutatAccountFrag.setRefreshing(false);
+            }
+        });
         return binding.getRoot();
     }
 
@@ -119,5 +136,21 @@ public class AccountFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
     }
+    public void getProfile(String uid){
+        Api api = RetrofitClient.getRetrofitInstance().create(Api.class);
+        Call<ResViewProfile> call=api.getProfile(uid);
+        call.enqueue(new Callback<ResViewProfile>() {
+            @Override
+            public void onResponse(Call<ResViewProfile> call, Response<ResViewProfile> response) {
+                if (response.isSuccessful()) {
+                    GlobalVar.getInstance().setProfile((ResViewProfile) response.body());
+                }
+            }
 
+            @Override
+            public void onFailure(Call<ResViewProfile> call, Throwable t) {
+                Log.e("onFailure: ",t.getMessage() );
+            }
+        });
+    }
 }
