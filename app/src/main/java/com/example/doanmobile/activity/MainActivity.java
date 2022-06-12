@@ -171,6 +171,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<ResCampaignSummary> call, Response<ResCampaignSummary> response) {
                 if (response.isSuccessful()) {
                     GlobalVar.getInstance().addCampainSummary((ResCampaignSummary) response.body());
+                    GlobalVar.getInstance().addClickedAddress(address);
                     temp++;
                     if (temp == t) {
                         setContentView(binding.getRoot());

@@ -51,6 +51,9 @@ public class GlobalVar extends Application {
 
     public String userid;
 
+
+
+    public ArrayList<String>ClickedAddress=new ArrayList<>();
     public int position;
 
     public ResViewProfile getProfile() {
@@ -64,7 +67,17 @@ public class GlobalVar extends Application {
     public ResDeployedCampaigns getListDeployedCampains() {
         return listDeployedCampains;
     }
+    public void addClickedAddress(String add) {
+        this.ClickedAddress.add(add);
+    }
 
+    public ArrayList<String> getClickedAddress() {
+        return ClickedAddress;
+    }
+
+    public void setClickedAddress(ArrayList<String> clickedAddress) {
+        ClickedAddress = clickedAddress;
+    }
     public void setListDeployedCampains(ResDeployedCampaigns listDeployedCampains) {
         this.listDeployedCampains = listDeployedCampains;
     }
@@ -96,4 +109,5 @@ public class GlobalVar extends Application {
     public void setPosition(int position) {
         this.position = position;
     }
+
 }
