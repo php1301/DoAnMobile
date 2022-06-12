@@ -67,7 +67,7 @@ public class CampaignDetailFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 WalletConnectKit walletConnectKit = GlobalVar.getInstance().getWalletConnectKit();
-                String url = "https://metamask.app.link/dapp/https://d99d-113-177-113-239.ngrok.io/"+ GlobalVar.getInstance().getListDeployedCampains().getList().get(GlobalVar.getInstance().getPosition())+"/withdrawal";
+                String url = "https://metamask.app.link/dapp/https://blockchain-charity.vercel.app/campaign/"+ GlobalVar.getInstance().getListDeployedCampains().getList().get(GlobalVar.getInstance().getPosition())+"/withdrawal";
                 Intent intent1 = new Intent(Intent.ACTION_VIEW);
                 intent1.setData(Uri.parse(url));
                 startActivity(intent1);
