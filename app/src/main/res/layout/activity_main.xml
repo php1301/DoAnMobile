@@ -19,7 +19,6 @@
         app:titleTextColor="@color/white"
         android:gravity="center"
         app:theme="@style/ToolbarTheme"/>
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_bottom_nav_container"
         android:name="androidx.navigation.fragment.NavHostFragment"

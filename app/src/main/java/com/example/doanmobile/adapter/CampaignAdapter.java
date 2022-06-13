@@ -180,7 +180,8 @@ public class CampaignAdapter extends RecyclerView.Adapter<CampaignAdapter.Campai
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(R.id.action_dashboardFragment_to_campaignDetailFragment);
                 GlobalVar.getInstance().setPosition(position);
-                Log.e( "onClick: ", String.valueOf(GlobalVar.getInstance().getPosition()));
+                Log.e( "onClick: ", String.valueOf(GlobalVar.getInstance().getListDeployedCampains().getList()
+                        .get(position)));
             }
         });
         // Set item views based on your views and data model

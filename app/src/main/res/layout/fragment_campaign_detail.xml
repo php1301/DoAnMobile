@@ -8,6 +8,10 @@
     tools:context=".fragment.CampaignDetailFragment"
     tools:ignore="MissingConstraints"
     android:orientation="vertical">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayoutatCamDet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -297,5 +301,6 @@
 
     </ScrollView>
 
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </LinearLayout>
