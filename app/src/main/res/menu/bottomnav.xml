@@ -14,8 +14,7 @@
     </item>
     <item
         android:id="@+id/manageCampaignFragment"
-        android:icon="@drawable/ic_volunteer_activism"
-        android:title="Manage Campaign"
+        android:title=""
         android:iconTint="@color/darkslategray">
     </item>
     <item

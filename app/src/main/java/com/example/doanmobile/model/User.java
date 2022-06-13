@@ -24,7 +24,7 @@ public class User {
 
     @SerializedName("finalizeRate")
     @Expose
-    private Integer finalizeRate;
+    private Double finalizeRate;
 
     public UserDetail getUser() {
         return user;
@@ -58,11 +58,11 @@ public class User {
         this.totalDonationReceived = totalDonationReceived;
     }
 
-    public Integer getFinalizeRate() {
+    public Double getFinalizeRate() {
         return finalizeRate;
     }
 
-    public void setFinalizeRate(Integer finalizeRate) {
+    public void setFinalizeRate(Double finalizeRate) {
         this.finalizeRate = finalizeRate;
     }
 }
