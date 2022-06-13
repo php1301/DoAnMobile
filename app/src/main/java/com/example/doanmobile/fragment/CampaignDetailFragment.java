@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 
 import com.example.doanmobile.Api;
 import com.example.doanmobile.GlobalVar;
+import com.example.doanmobile.LoadingDialog;
 import com.example.doanmobile.R;
 import com.example.doanmobile.RetrofitClient;
 import com.example.doanmobile.adapter.DonorAdapter;
@@ -39,6 +40,7 @@ import retrofit2.Response;
 public class CampaignDetailFragment extends Fragment {
 
     FragmentCampaignDetailBinding binding;
+    LoadingDialog loadingDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -95,7 +97,7 @@ public class CampaignDetailFragment extends Fragment {
             @Override
             public void onRefresh() {
                 System.out.println("request pull to refresh at Cam detail");
-
+                loadingDialog = new LoadingDialog(getActivity());
                 getCampaignsummary(GlobalVar.getInstance().getClickedAddress().get(GlobalVar.getInstance().getPosition()));
                 binding.swipeRefreshLayoutatCamDet.setRefreshing(false);
             }
@@ -121,6 +123,7 @@ public class CampaignDetailFragment extends Fragment {
         return binding;
     }
     public void getCampaignsummary(String address){
+        loadingDialog.showDialog("Loading...");
         Api api = RetrofitClient.getRetrofitInstance().create(Api.class);
         System.out.println(address);
         Call<ResCampaignSummary> call=api.getCampaignsummary(address);
@@ -171,6 +174,7 @@ public class CampaignDetailFragment extends Fragment {
                     });
 
                 }
+                loadingDialog.HideDialog();
             }
 
             @Override

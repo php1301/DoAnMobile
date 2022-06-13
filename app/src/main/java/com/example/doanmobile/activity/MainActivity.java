@@ -16,6 +16,7 @@ import android.view.MenuItem;
 
 import com.example.doanmobile.Api;
 import com.example.doanmobile.GlobalVar;
+import com.example.doanmobile.LoadingDialog;
 import com.example.doanmobile.R;
 import com.example.doanmobile.RetrofitClient;
 import com.example.doanmobile.databinding.ActivityMainBinding;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private WalletConnectKit walletConnectKit;
     ActivityMainBinding binding;
-
+    LoadingDialog loadingDialog;
     private int temp;
     private String sort="new";
     private String address="0xa5b0B408D996627C0264a34080CD4CA397a66D5E";
@@ -69,10 +70,9 @@ public class MainActivity extends AppCompatActivity {
                 "abc",
                 list
         );
+        loadingDialog = new LoadingDialog(this);
         getProfile(GlobalVar.getInstance().getUserid());
         getDeployedCampaign(sort);
-
-//        getProfile(uid);
 
 //        getProfile(uid);
 //        getDeployedCampaign(sort);
@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getDeployedCampaign(String sort){
+        loadingDialog.showDialog("Loading...");
         Api api = RetrofitClient.getRetrofitInstance().create(Api.class);
         Call<ResDeployedCampaigns> call=api.getDeployedCampaign(sort);
         call.enqueue(new Callback<ResDeployedCampaigns>() {
@@ -137,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
                     int size = list.getList().size();
                     if (size == 0)
                     {
+                        loadingDialog.HideDialog();
                         setContentView(binding.getRoot());
                         final SwipeRefreshLayout pullToRefresh = findViewById(R.id.swipeRefreshLayout);
                         pullToRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -156,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-
             @Override
             public void onFailure(Call<ResDeployedCampaigns> call, Throwable t) {
                 Log.e("onFailure: ",t.getMessage() );
@@ -174,6 +175,7 @@ public class MainActivity extends AppCompatActivity {
                     GlobalVar.getInstance().addClickedAddress(address);
                     temp++;
                     if (temp == t) {
+                        loadingDialog.HideDialog();
                         setContentView(binding.getRoot());
                         final SwipeRefreshLayout pullToRefresh = findViewById(R.id.swipeRefreshLayout);
                         pullToRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -186,6 +188,7 @@ public class MainActivity extends AppCompatActivity {
                         });
                     }
                 }
+
             }
 
             @Override

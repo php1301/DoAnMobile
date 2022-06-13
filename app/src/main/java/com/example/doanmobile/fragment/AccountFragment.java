@@ -21,6 +21,7 @@ import android.widget.ViewSwitcher;
 import com.example.doanmobile.Api;
 import com.example.doanmobile.GlobalVar;
 import com.example.doanmobile.LoadImageURL;
+import com.example.doanmobile.LoadingDialog;
 import com.example.doanmobile.R;
 import com.example.doanmobile.RetrofitClient;
 import com.example.doanmobile.adapter.ListWalletAdapter;
@@ -37,6 +38,8 @@ import retrofit2.Response;
 public class AccountFragment extends Fragment {
 
     FragmentAccountBinding binding;
+    private String uid="0x4ddFf5E113FF403f193503c280DDf7723E53Ca11";
+    LoadingDialog loadingDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -124,8 +127,10 @@ public class AccountFragment extends Fragment {
         binding.swipeRefreshLayoutatAccountFrag.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
+                loadingDialog = new LoadingDialog(getActivity());
                 System.out.println("request pull to refresh at Profile");
                 getProfile(GlobalVar.getInstance().getUserid());
+//                getProfile(uid);
                 binding.swipeRefreshLayoutatAccountFrag.setRefreshing(false);
             }
         });
@@ -137,6 +142,7 @@ public class AccountFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
     public void getProfile(String uid){
+        loadingDialog.showDialog("Loading...");
         Api api = RetrofitClient.getRetrofitInstance().create(Api.class);
         Call<ResViewProfile> call=api.getProfile(uid);
         call.enqueue(new Callback<ResViewProfile>() {
@@ -145,6 +151,7 @@ public class AccountFragment extends Fragment {
                 if (response.isSuccessful()) {
                     GlobalVar.getInstance().setProfile((ResViewProfile) response.body());
                 }
+                loadingDialog.HideDialog();
             }
 
             @Override
