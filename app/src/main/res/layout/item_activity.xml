@@ -10,7 +10,7 @@
     android:gravity="center">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardview"
+        android:id="@+id/Act_bg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/content_horizontal"
@@ -50,7 +50,6 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:maxLength="20"
                     android:text="Quỹ vaccine..."
                     android:textSize="@dimen/text_normal"
                     android:textColor="@color/black" />
@@ -71,7 +70,7 @@
                 android:gravity="right"
                 android:text="-1.5ETH"
                 android:textColor="@color/text_value"
-                android:textSize="@dimen/text_large"
+                android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>

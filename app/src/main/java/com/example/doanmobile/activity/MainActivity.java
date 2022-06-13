@@ -9,10 +9,13 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.doanmobile.Api;
 import com.example.doanmobile.GlobalVar;
@@ -70,8 +73,10 @@ public class MainActivity extends AppCompatActivity {
                 "abc",
                 list
         );
+
+        getProfile(uid);
         loadingDialog = new LoadingDialog(this);
-        getProfile(GlobalVar.getInstance().getUserid());
+    //    getProfile(GlobalVar.getInstance().getUserid());
         getDeployedCampaign(sort);
 
 //        getProfile(uid);
@@ -118,7 +123,13 @@ public class MainActivity extends AppCompatActivity {
 //         Handle item selection
         switch (item.getItemId()) {
             case R.id.toolbar_search:
+                Toast.makeText(MainActivity.this, "Thank You For Using Our App", Toast.LENGTH_SHORT).show();
+                return super.onOptionsItemSelected(item);
             case R.id.toolbar_notification:
+                Uri uri = Uri.parse("https://github.com/php1301/DoAnMobile");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                return super.onOptionsItemSelected(item);
             default:
                 return super.onOptionsItemSelected(item);
         }

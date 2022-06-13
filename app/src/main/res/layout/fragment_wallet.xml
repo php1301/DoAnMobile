@@ -33,7 +33,7 @@
                     android:paddingTop="25dp"
                     android:paddingRight="20dp"
                     android:paddingBottom="10dp"
-                    android:text="Hello, Mobile!"
+                    android:text="Hello!"
                     android:textColor="#FFFFFF"
                     android:textSize="@dimen/text_normal" />
 
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="10dp"
                     android:paddingBottom="30dp"
-                    android:text="Your balance"
+                    android:text="Your statistics"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
                     android:textSize="@dimen/text_normal" />
@@ -68,12 +68,14 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardview_deposit"
-                        android:layout_width="wrap_content"
+                        android:layout_width="160dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:minWidth="@dimen/_85mdp"
                         android:layout_margin="@dimen/_5mdp"
                         app:cardElevation="@dimen/_3mdp"
@@ -93,38 +95,40 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/linearLayout_balance">
 
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
+                            <TextView
+                                android:id="@+id/number_campaign"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
                                 android:layout_marginTop="20dp"
-                                android:layout_marginEnd="60dp"
-                                android:layout_marginBottom="10dp"
                                 android:layout_weight="1"
-                                android:contentDescription="Deposit"
-                                android:scaleType="center"
-                                android:tint="@color/white"
-                                android:src="@drawable/ic_deposit_24" />
+                                android:text=""
+                                android:textColor="#FFFFFF"
+                                android:textAlignment="center"/>
 
                             <TextView
                                 android:id="@+id/deposit_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
-                                android:layout_marginBottom="15dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="20dp"
                                 android:layout_weight="1"
-                                android:lines="2"
                                 android:text="@string/deposit_money"
                                 android:textColor="#FFFFFF"
-                                android:textSize="@dimen/text_normal" />
+                                android:textSize="@dimen/text_normal"
+                                android:textAlignment="center"
+                                android:lines="3"/>
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardview_withdraw"
-                        android:layout_width="wrap_content"
+                        android:layout_width="160dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:minWidth="@dimen/_85mdp"
                         android:layout_margin="@dimen/_5mdp"
                         app:cardElevation="@dimen/_3mdp"
@@ -144,30 +148,84 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/linearLayout_balance">
 
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
+                            <TextView
+                                android:id="@+id/total_donation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
                                 android:layout_marginTop="20dp"
-                                android:layout_marginEnd="60dp"
-                                android:layout_marginBottom="10dp"
                                 android:layout_weight="1"
-                                android:contentDescription="Deposit"
-                                android:scaleType="center"
-                                android:tint="@color/blue_mbg"
-                                android:src="@drawable/ic_deposit_24" />
+                                android:text=""
+                                android:textColor="@color/blue_mbg"
+                                android:textAlignment="center"/>
 
                             <TextView
                                 android:id="@+id/withdraw_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
-                                android:layout_marginBottom="15dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="20dp"
                                 android:layout_weight="1"
-                                android:lines="2"
                                 android:text="@string/withdraw_money"
                                 android:textColor="@color/blue_mbg"
-                                android:textSize="@dimen/text_normal" />
+                                android:textSize="@dimen/text_normal"
+                                android:textAlignment="center"
+                                android:lines="3"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview_finalizeRate"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minWidth="@dimen/_85mdp"
+                        android:layout_margin="@dimen/_5mdp"
+                        app:cardElevation="@dimen/_3mdp"
+                        app:cardCornerRadius="15dp"
+                        android:backgroundTint="@color/blue_mbg"
+                        app:cardPreventCornerOverlap="true">
+
+                        <LinearLayout
+                            android:id="@+id/btn_finalizeRate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@null"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout_balance">
+
+                            <TextView
+                                android:id="@+id/finalize_Rate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textColor="#FFFFFF"
+                                android:textAlignment="center"/>
+
+                            <TextView
+                                android:id="@+id/finalizeRate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_weight="1"
+                                android:text="Finalize Rate"
+                                android:textColor="#FFFFFF"
+                                android:textSize="@dimen/text_normal"
+                                android:textAlignment="center"
+                                android:lines="3"/>
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
@@ -193,18 +251,9 @@
                             android:textColor="#000000"
                             android:textSize="@dimen/text_large"
                             android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="parent"/>
-
-                        <TextView
-                            android:id="@+id/txtv_view_all"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5mdp"
-                            android:text="@string/view_all"
-                            android:textColor="#0A5DAE"
-                            android:textSize="@dimen/text_normal"
-                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
+
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 

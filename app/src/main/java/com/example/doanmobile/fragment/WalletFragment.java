@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.doanmobile.GlobalVar;
 import com.example.doanmobile.R;
 import com.example.doanmobile.adapter.ActivityAdapter;
 import com.example.doanmobile.adapter.DonorAdapter;
@@ -40,25 +41,24 @@ public class WalletFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentWalletBinding.inflate(getLayoutInflater());
 
-        binding.txtvViewAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_walletFragment_to_activitiesListFragment);
-            }
-        });
-
+        binding.ETHValue.setText(GlobalVar.getInstance().getProfile().getUser().getUser().getFirstName() + " " + GlobalVar.getInstance().getProfile().getUser().getUser().getLastName());
+        binding.numberCampaign.setText(GlobalVar.getInstance().getProfile().getUser().getNumberOfCampaigns().toString());
+        String td = GlobalVar.getInstance().getProfile().getUser().getTotalDonationReceived().toString();
+        if (td.length() > 8)
+            td = td.substring(0, 5) + "...";
+        binding.totalDonation.setText(td);
+        String fr = GlobalVar.getInstance().getProfile().getUser().getFinalizeRate().toString();
+        if (fr.length() > 8)
+            fr = td.substring(0, 5) + "...";
+        binding.finalizeRate.setText(fr);
         createTestList();
 
         return binding.getRoot();
     }
 
     public FragmentWalletBinding createTestList(){
-        Activity activity = new Activity(5);
-        ArrayList<Activity> activitiesList = new ArrayList<>();
 
-        for (int i = 0; i < 3; i++)
-            activitiesList.add(activity);
-        ActivityAdapter adapter = new ActivityAdapter(activitiesList, getContext());
+        ActivityAdapter adapter = new ActivityAdapter(GlobalVar.getInstance().getCampainSummary(), getContext());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         binding.rvActivitiesList.setAdapter(adapter);
         binding.rvActivitiesList.setLayoutManager(linearLayoutManager);

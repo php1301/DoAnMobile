@@ -29,8 +29,8 @@
         android:label=""
         tools:layout="@layout/fragment_wallet" >
         <action
-            android:id="@+id/action_walletFragment_to_activitiesListFragment"
-            app:destination="@id/activitiesListFragment"
+            android:id="@+id/action_walletFragment_to_campaignDetailFragment"
+            app:destination="@id/campaignDetailFragment"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
             app:popEnterAnim="@anim/pop_slide_in"

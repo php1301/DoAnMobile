@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.doanmobile.GlobalVar;
 import com.example.doanmobile.R;
 import com.example.doanmobile.adapter.ActivityAdapter;
 import com.example.doanmobile.adapter.DonorAdapter;
@@ -45,13 +46,8 @@ public class ActivitiesListFragment extends Fragment {
     }
 
     public FragmentActivitiesListBinding createTestList(){
-        Activity activity = new Activity(5);
-        ArrayList<Activity> activitiesList = new ArrayList<>();
 
-        for (int i = 0; i < 5; i++)
-            activitiesList.add(activity);
-
-        ActivityAdapter adapter = new ActivityAdapter(activitiesList, getContext());
+        ActivityAdapter adapter = new ActivityAdapter(GlobalVar.getInstance().getCampainSummary(), getContext());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         binding.rvActivitiesList.setAdapter(adapter);
         binding.rvActivitiesList.setLayoutManager(linearLayoutManager);
