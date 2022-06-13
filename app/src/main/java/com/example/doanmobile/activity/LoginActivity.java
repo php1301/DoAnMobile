@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity implements Session.Callback
         WalletConnectKitConfig config = new WalletConnectKitConfig(
                 LoginActivity.this,
                 "https://bridge.walletconnect.org",
-                "https://blockchain-charity.vercel.app/",
+                "https://blockchain-charity.vercel.app",
                 "WalletConnectKit",
                 "abc",
                 list

@@ -21,78 +21,6 @@
             tools:ignore="MissingConstraints">
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardview_language"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/content_horizontal"
-                android:layout_marginTop="@dimen/_15mdp"
-                android:layout_marginBottom="@dimen/_15mdp"
-                app:cardElevation="@dimen/_5mdp"
-                app:cardPreventCornerOverlap="true"
-                app:shapeAppearance="@style/ShapeAppearance.Material3.MediumComponent.Rounded"
-                android:theme="@style/Theme.MaterialComponents.Light">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="@dimen/_10mdp"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:layout_width="@dimen/_25mdp"
-                        android:layout_height="@dimen/_25mdp"
-                        android:tint="@color/darkslategray"
-                        android:src="@drawable/ic_language" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/_12mdp"
-                        android:text="Language"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/text_normal"/>
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardview_notification"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/content_horizontal"
-                android:layout_marginBottom="@dimen/_15mdp"
-                app:cardElevation="@dimen/_5mdp"
-                app:cardPreventCornerOverlap="true"
-                app:shapeAppearance="@style/ShapeAppearance.Material3.MediumComponent.Rounded"
-                android:theme="@style/Theme.MaterialComponents.Light"
-                app:layout_constraintTop_toBottomOf="@id/cardview_language">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="@dimen/_10mdp"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:layout_width="@dimen/_25mdp"
-                        android:layout_height="@dimen/_25mdp"
-                        android:tint="@color/darkslategray"
-                        android:src="@drawable/ic_notifications" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/_15mdp"
-                        android:text="Notification"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/text_normal"/>
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardview_support"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -102,7 +30,7 @@
                 app:cardPreventCornerOverlap="true"
                 app:shapeAppearance="@style/ShapeAppearance.Material3.MediumComponent.Rounded"
                 android:theme="@style/Theme.MaterialComponents.Light"
-                app:layout_constraintTop_toBottomOf="@id/cardview_notification">
+                app:layout_constraintTop_toBottomOf="@id/cardview_about">
 
                 <LinearLayout
                     android:layout_width="match_parent"

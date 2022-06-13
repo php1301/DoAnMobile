@@ -39,7 +39,15 @@ public class SettingFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentSettingBinding.inflate(getLayoutInflater());
-
+        binding.cardviewAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://github.com/php1301/DoAnMobile";
+                Intent intent1 = new Intent(Intent.ACTION_VIEW);
+                intent1.setData(Uri.parse(url));
+                startActivity(intent1);
+            }
+        });
         binding.cardviewLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -49,7 +49,7 @@ public class WalletFragment extends Fragment {
         binding.totalDonation.setText(td);
         String fr = GlobalVar.getInstance().getProfile().getUser().getFinalizeRate().toString();
         if (fr.length() > 8)
-            fr = td.substring(0, 5) + "...";
+            fr = fr.substring(0, 5) + "%";
         binding.finalizeRate.setText(fr);
         createTestList();
 
