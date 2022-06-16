@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">DoAnMobile</string>
+    <string name="test_text">The world is facing an unprecedented challenge with communities and economies everywhere affected by the growing COVID-19 pandemic.
+        The world is coming to combat the COVID-19 pandemic bringing governments, organizations from across industries and sectors and individuals together to help respond to this global outbreak.
+        The outpouring of global solidarity and support sparked by this shared challenge has been phenomenal.
+        Everyone can now support directly the response coordinated by WHO.
+        People and organizations who want to help fight the pandemic and support WHO and partners can now donate through the COVID-Solidarity Response Fund for WHO, powered by the WHO Foundation in collaboration with the UN Foundation and a global network of partners</string>
     <string name="language">Language</string>
     <string name="notifications">Notifications</string>
     <string name="support">Support</string>
@@ -7,13 +12,13 @@
     <string name="logout">Logout</string>
     <string name="personal_information">Personal Information</string>
     <string name="name">Name</string>
-    <string name="username">Username</string>
+    <string name="username">User</string>
     <string name="email">Email</string>
     <string name="phone">Phone</string>
     <string name="my_wallet">My Wallet</string>
-    <string name="deposit_money">Deposit money</string>
-    <string name="withdraw_money">Withdraw money</string>
-    <string name="activity">Activity</string>
+    <string name="deposit_money">Number Of \nCampaigns</string>
+    <string name="withdraw_money">Total Donation \nReceived</string>
+    <string name="activity">Campaign</string>
     <string name="view_all">View all</string>
     <string name="array">Don\'t have an account? <font name="Sign_up" color="#6AE5D6">Sign Up</font></string>
     <string name="Term">I agree with <font name="Terms" color="#6AE5D6">Terms and Conditions</font></string>

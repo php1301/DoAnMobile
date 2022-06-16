@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomnav"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.doanmobile.fragment.AccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.doanmobile.fragment.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_campaignDetailFragment"
+            app:destination="@id/campaignDetailFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.example.doanmobile.fragment.WalletFragment"
+        android:label=""
+        tools:layout="@layout/fragment_wallet" >
+        <action
+            android:id="@+id/action_walletFragment_to_campaignDetailFragment"
+            app:destination="@id/campaignDetailFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/manageCampaignFragment"
+        android:name="com.example.doanmobile.fragment.ManageCampaignFragment"
+        android:label="Manage Campaign"
+        tools:layout="@layout/fragment_manage_campaign" >
+        <action
+            android:id="@+id/action_manageCampaignFragment_to_createCampaignFragment"
+            app:destination="@id/createCampaignFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.doanmobile.fragment.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_loginActivity"
+            app:destination="@id/loginActivity"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/campaignDetailFragment"
+        android:name="com.example.doanmobile.fragment.CampaignDetailFragment"
+        android:label="Campaign Detail"
+        tools:layout="@layout/fragment_campaign_detail" >
+        <action
+            android:id="@+id/action_campaignDetailFragment_to_donateFragment"
+            app:destination="@id/donateFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out"/>
+        <action
+            android:id="@+id/action_campaignDetailFragment_to_donorsListFragment"
+            app:destination="@id/donorsListFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out"/>
+        <action
+            android:id="@+id/action_campaignDetailFragment_to_pathCampaignFragment"
+            app:destination="@id/pathCampaignFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/pop_slide_in"
+            app:popExitAnim="@anim/pop_slide_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/donateFragment"
+        android:name="com.example.doanmobile.fragment.DonateFragment"
+        android:label="Donate"
+        tools:layout="@layout/fragment_donate" />
+    <fragment
+        android:id="@+id/donorsListFragment"
+        android:name="com.example.doanmobile.fragment.DonorsListFragment"
+        android:label="Donors List"
+        tools:layout="@layout/fragment_donors_list" />
+    <fragment
+        android:id="@+id/pathCampaignFragment"
+        android:name="com.example.doanmobile.fragment.PathCampaignFragment"
+        android:label="Campaign Information"
+        tools:layout="@layout/fragment_path_campaign" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.doanmobile.activity.LoginActivity"
+        android:label="Login"
+        tools:layout="@layout/activity_login">
+    </activity>
+    <activity
+        android:id="@+id/signUpActivity"
+        android:name="com.example.doanmobile.activity.SignUpActivity"
+        android:label="Signup"
+        tools:layout="@layout/activity_sign_up">
+    </activity>
+    <fragment
+        android:id="@+id/activitiesListFragment"
+        android:name="com.example.doanmobile.fragment.ActivitiesListFragment"
+        android:label="Activities List"
+        tools:layout="@layout/fragment_activities_list" />
+    <fragment
+        android:id="@+id/createCampaignFragment"
+        android:name="com.example.doanmobile.fragment.CreateCampaignFragment"
+        android:label="Create Campaign"
+        tools:layout="@layout/fragment_create_campaign" />
+</navigation>

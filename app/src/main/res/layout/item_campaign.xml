@@ -4,20 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:minHeight="@dimen/_380mdp"
-    android:paddingTop="@dimen/_10mdp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:ignore="MissingConstraints">
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginHorizontal="@dimen/_5mdp"
-            android:layout_marginVertical="@dimen/_5mdp"
-            app:cardCornerRadius="15dp"
+            android:layout_marginHorizontal="@dimen/content_horizontal"
+            android:layout_marginVertical="@dimen/content_item_space"
+            app:cardCornerRadius="@dimen/card_radius"
             app:cardElevation="@dimen/_3mdp"
             android:backgroundTint="@color/white"
-            android:elevation="@dimen/_10mdp"
             app:cardPreventCornerOverlap="true">
 
             <LinearLayout
@@ -44,7 +46,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_10mdp"
                         android:text="Organization"
-                        android:textSize="@dimen/_18font_mdp"
+                        android:textSize="@dimen/text_normal"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/imgv_avatar_organization"/>
@@ -69,6 +71,7 @@
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/imgv_img_campaign"
+                        android:transitionName="anim_campaign"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_150mdp"
                         android:maxHeight="@dimen/_100mdp"
@@ -82,7 +85,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="@dimen/_10mdp"
                         android:text="COVID-19 Vaccine Support Fund"
-                        android:textSize="@dimen/_18font_mdp"
+                        android:textSize="@dimen/text_normal"
                         app:layout_constraintTop_toBottomOf="@id/imgv_img_campaign"/>
 
                     <ProgressBar
@@ -102,28 +105,31 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="@dimen/_10mdp"
-                        app:layout_constraintTop_toBottomOf="@id/pgb_campaign"
-                        tools:ignore="NotSibling">
+                        app:layout_constraintTop_toBottomOf="@id/pgb_campaign">
 
-                        <TextView
-                            android:id="@+id/txtv_gain_eth"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginVertical="@dimen/_10mdp"
-                            android:text="5500"
-                            android:textSize="@dimen/_20font_mdp"
-                            android:textStyle="bold"
-                            android:textColor="@color/blue_mbg" />
+                        <LinearLayout
+                            android:id="@+id/linearLayout_money"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
-                        <TextView
-                            android:id="@+id/txtv_target_eth"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="/10000 ETH"
-                            android:textSize="@dimen/_20font_mdp"
-                            android:textColor="@color/darkgray"
-                            app:layout_constraintStart_toEndOf="@id/txtv_gain_eth"
-                            app:layout_constraintTop_toBottomOf="@id/pgb_campaign"/>
+                            <TextView
+                                android:id="@+id/txtv_gain_eth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5500"
+                                android:textSize="@dimen/text_xlarge"
+                                android:textStyle="bold"
+                                android:textColor="@color/blue_mbg" />
+
+                            <TextView
+                                android:id="@+id/txtv_target_eth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/10000 ETH"
+                                android:textSize="@dimen/text_xlarge"
+                                android:textColor="@color/darkgray" />
+
+                        </LinearLayout>
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/crv_dayleft"
@@ -133,17 +139,10 @@
                             app:strokeColor="@color/blue_mbg"
                             app:strokeWidth="1dp"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/pgb_campaign"
+                            app:layout_constraintTop_toBottomOf="@id/linearLayout_money"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             android:theme="@style/Theme.MaterialComponents.Light">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:paddingHorizontal="@dimen/_10mdp"
-                                android:text="20 days left"
-                                android:textColor="@color/blue_mbg"/>
 
                         </com.google.android.material.card.MaterialCardView>
 
@@ -167,6 +166,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/darkgray"
+                                android:textSize="@dimen/text_normal"
                                 android:text="Achieve"/>
 
                             <TextView
@@ -174,7 +174,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="55%"
-                                android:textSize="@dimen/_18font_mdp"
+                                android:textSize="@dimen/text_large"
                                 app:layout_constraintTop_toBottomOf="@id/txtv_achieve"/>
 
                         </LinearLayout>
@@ -192,6 +192,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Num of donation"
                                 android:textColor="@color/darkgray"
+                                android:textSize="@dimen/text_normal"
                                 app:layout_constraintStart_toEndOf="@id/txtv_achieve"
                                 app:layout_constraintTop_toBottomOf="@id/txtv_gain_eth"/>
 
@@ -200,7 +201,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="105"
-                                android:textSize="@dimen/_18font_mdp"
+                                android:textSize="@dimen/text_large"
                                 app:layout_constraintStart_toEndOf="@id/txtv_percent_campaign"
                                 app:layout_constraintTop_toBottomOf="@id/txtv_achieve"/>
 
@@ -214,4 +215,9 @@
 
         </androidx.cardview.widget.CardView>
 
+    </LinearLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

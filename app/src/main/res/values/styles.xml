@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="ToolbarTheme" parent="@style/Theme.AppCompat.Light">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
     <style name="imgv_rounded" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/_10mdp</item>
         <item name="color">@color/white</item>
+    </style>
+
+    <style name="ShapeAppearance.Material3.SmallComponent.BtnRounded" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="android:textSize">@dimen/_15font_mdp</item>
+        <item name="color">@color/blue_mbg</item>
+        <item name="cornerRadius">@dimen/_10mdp</item>
     </style>
 
     <style name="ShapeAppearance.Material3.MediumComponent.Rounded" parent="ShapeAppearance.Material3.MediumComponent">
@@ -12,4 +23,5 @@
         <item name="cornerSizeTopLeft">@dimen/_15mdp</item>
         <item name="cornerSizeBottomRight">@dimen/_15mdp</item>
     </style>
+
 </resources>

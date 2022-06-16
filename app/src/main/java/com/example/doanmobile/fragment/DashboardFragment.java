@@ -5,15 +5,15 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.doanmobile.Campaign;
-import com.example.doanmobile.R;
+import com.example.doanmobile.GlobalVar;
+import com.example.doanmobile.model.Campaign;
 import com.example.doanmobile.adapter.CampaignAdapter;
 import com.example.doanmobile.databinding.FragmentDashboardBinding;
 
@@ -39,21 +39,7 @@ public class DashboardFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentDashboardBinding.inflate(getLayoutInflater());
 
-//        setSupportActionBar(binding.toolbarDashboard);
-//        getSupportActionBar().setDisplayShowTitleEnabled(false);
-
         createTestList();
-
-        binding.btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // action = DashboardFragmentDirections.action
-                Navigation.findNavController(view).navigate(R.id.action_dashboardFragment_to_campaignDetailFragment);
-            }
-        });
-
-       // setSupportActionBar(binding.toolbarDashboard);
-        //getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         // Initialize contacts
         return binding.getRoot();
@@ -62,42 +48,22 @@ public class DashboardFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        binding.btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                NavHostFragment.findNavController(DashboardFragment.this)
-//                        .navigate(R.id.campaign_to_campaigndetail);
-//            }
-//        });
     }
 
     public FragmentDashboardBinding createTestList(){
-        Campaign campaign = new Campaign("abc");
-        campaignsList = new ArrayList<>();
 
-        for (int i = 0; i < 5; i++)
-            campaignsList.add(campaign);
-        CampaignAdapter adapter = new CampaignAdapter(campaignsList, getContext());
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-        binding.rvCampaign.setAdapter(adapter);
-        binding.rvCampaign.setLayoutManager(linearLayoutManager);
+//        campaignsList = new ArrayList<>();
+//
+//        campaignsList.add( new Campaign("AntiCOVID", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrEejUt9id9JnFZyvW8rUJDQ0jVKmPtkJHuMbLV4i4ydP0fAMDkiWx__Dd4MuGawEdEaA&usqp=CAU"));
+//        campaignsList.add( new Campaign("Global Forest", "https://en.baoquocte.vn/stores/news_dataimages/lananh/032022/04/11/in_article/adb-ho-tro-15-trieu-usd-phat-trien-lam-nghiep-ben-vung-o-dong-nam-a.jpg?rt=20220304145227"));
+//        campaignsList.add( new Campaign("ChildFund", "https://media.globalcitizen.org/thumbnails/9b/bd/9bbd86a1-4827-4243-b033-dcbd2e7fe5a5/nedbankchildprotectionandsafety.jpg__1600x900_q85_crop_subsampling-2.jpg"));
+//            Log.e( "createTestList: ", String.valueOf(GlobalVar.getInstance().getCampainSummary().size()));
+            CampaignAdapter adapter = new CampaignAdapter(GlobalVar.getInstance().getCampainSummary(), getContext());
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+            binding.rvCampaign.setAdapter(adapter);
+            binding.rvCampaign.setLayoutManager(linearLayoutManager);
+
         // That's all!
         return binding;
     }
-
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.toolbar, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle item selection
-//        switch (item.getItemId()) {
-//            case R.id.toolbar_search:
-//            case R.id.toolbar_notification:
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//    }
 }

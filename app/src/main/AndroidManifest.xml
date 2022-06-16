@@ -1,67 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.doanmobile">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DoAnMobile"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".Wallet"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        </activity>
-        <activity
-            android:name=".AllActivity"
-            android:exported="true"
-            android:label="Activity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity
-            android:name=".Account"
-            android:exported="true"
-            android:label="Account"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity
-            android:name=".Setting"
-            android:exported="true"
-            android:label="Setting"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity
-            android:name=".Create_Campaign_2"
-            android:exported="true"
-            android:label="Create_Campaign_2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Create_Campaign"
-            android:exported="true"
-            android:label="Create_Campaign"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Sign_up"
-            android:exported="true"
-            android:label="Sign_up"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Login"
+            android:name=".activity.LoginActivity"
             android:exported="true"
             android:label="Login"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activity.DashboardActivity"
-            android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
-        <activity
-            android:name=".activity.CampaignDetailActivity"
-            android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
-        <activity
-            android:name=".activity.MainActivity"
-            android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar">
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            android:theme="@style/splashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -69,12 +25,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.CampaignDetailActivity"
+            android:name=".activity.SignUpActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+            android:label="Sign_up"
+            android:theme="@style/Theme.DoAnMobile" />
         <activity
             android:name=".activity.MainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+            android:exported="true"
+            android:theme="@style/Theme.DoAnMobile">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="metamask.app.link/dapp/blockchain-charity.vercel.app/campaign/new"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
     </application>
+
 </manifest>

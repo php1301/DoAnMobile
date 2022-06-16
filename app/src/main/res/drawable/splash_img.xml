@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/white"/>
+
+    <item
+        android:drawable="@mipmap/ic_charity_logo"
+        android:width="@dimen/_100mdp"
+        android:height="@dimen/_100mdp"
+        android:gravity="center"/>
+</layer-list>
